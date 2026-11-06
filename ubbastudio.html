@@ -1,100 +1,3706 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ubbastudio — Software development studio, Delhi</title>
-<meta name="description" content="ubbastudio is an independent software development studio in Delhi. We design and build websites, apps, digital products and AI automations.">
-<meta name="theme-color" content="#ff580a">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%23ff580a'/%3E%3Cpath d='M16 32 32 16 48 32 32 48Z' fill='white'/%3E%3C/svg%3E">
-<link rel="preconnect" href="https://images.unsplash.com"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://unpkg.com/lenis@1.3.27/dist/lenis.css">
-<style>
-:root{--orange:#ff580a;--darkorange:#d83900;--ink:#11111d;--muted:#72727e;--pale:#f4f3f5;--line:#e6e4e8;--radius:30px;--max:1440px}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:120px}body{margin:0;background:#fff;color:var(--ink);font-family:Helvetica,'Helvetica Neue',Arial,sans-serif;-webkit-font-smoothing:antialiased}button,input,textarea{font:inherit}button,a{-webkit-tap-highlight-color:transparent}a{color:inherit;text-decoration:none}button{cursor:pointer}img{display:block;width:100%;height:100%;object-fit:cover}button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #12121c;outline-offset:5px}::selection{background:#ffd8c4;color:#111}h1,h2,h3,p{margin:0}h1,h2,h3{font-weight:500;letter-spacing:-.055em}p{line-height:1.55}.wrap{width:min(89.4%,var(--max));margin:auto}.section{padding:108px 0}.section-title{font-size:clamp(44px,5.2vw,76px);line-height:1.06}.muted{color:var(--muted)}.eyebrow{font-size:13px;text-transform:uppercase;letter-spacing:.14em;font-weight:600}.section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:58px}.section-head p{font-size:18px;max-width:450px;margin-top:24px}.btn{display:inline-flex;align-items:center;justify-content:space-between;gap:20px;border:1px solid var(--line);border-radius:100px;background:#fff;color:var(--ink);padding:6px 6px 6px 23px;font-size:15px;font-weight:550;white-space:nowrap;transition:transform .25s,box-shadow .25s}.btn .arrow{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:var(--ink);color:white;font-size:23px;font-weight:400;transition:transform .3s}.btn:hover{transform:translateY(-3px);box-shadow:0 8px 25px #0000000c}.btn:hover .arrow{transform:rotate(-35deg)}.btn.orange{background:var(--orange);color:white;border-color:var(--orange)}.btn.orange .arrow{background:white;color:var(--orange)}.btn.white .arrow{background:var(--orange)}.btn.ghost{color:white;background:#ffffff0b;border-color:#ffffff4d}.btn.ghost .arrow{background:white;color:var(--orange)}.pill{border-radius:99px;padding:10px 17px;border:1px solid var(--line);font-size:13px}.nav{position:fixed;z-index:50;top:18px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:36px;padding:7px 7px 7px 20px;background:#fffffff5;border:1px solid #e4e2e6;border-radius:100px;backdrop-filter:blur(18px);box-shadow:0 2px 2px #00000002;transition:box-shadow .3s}.nav.scrolled{box-shadow:0 8px 40px #0000000c}.brand{display:inline-flex;align-items:center;gap:10px;font-size:20px;font-weight:700;letter-spacing:-.06em}.brand-icon{height:28px;width:28px;display:grid;place-items:center;background:var(--orange);border-radius:50%}.brand-icon:after{content:'';width:11px;height:11px;border-radius:2px;background:white;transform:rotate(45deg)}.nav-links{display:flex;align-items:center;gap:26px;font-size:14px;font-weight:550}.nav-links a{transition:color .2s}.nav-links a:hover{color:var(--orange)}.menu-toggle{display:none;border:0;background:none;width:34px;height:34px;font-size:23px}.progress{position:fixed;top:0;left:0;height:3px;transform-origin:left;transform:scaleX(0);width:100%;background:var(--ink);z-index:100}.hero{background:radial-gradient(ellipse at 50% 0%,#ff7931 0%,#ff580a 48%,#cf3600 100%);color:white;text-align:center;padding:124px 20px 0;overflow:hidden;position:relative}.hero-label{display:inline-flex;align-items:center;gap:10px;background:#ffffff20;border:1px solid #ffffff16;border-radius:99px;padding:10px 18px;font-size:14px;font-weight:500}.live-dot{width:7px;height:7px;background:#fff;border-radius:50%;box-shadow:0 0 0 4px #ffffff1c}.hero h1{font-size:clamp(52px,5.75vw,100px);line-height:1.02;max-width:1250px;margin:29px auto 26px;letter-spacing:-.055em}.hero p{font-size:clamp(17px,1.45vw,24px);max-width:650px;margin:0 auto;color:#fff3eb;line-height:1.5}.hero-actions{display:flex;justify-content:center;gap:10px;margin-top:28px}.fan{position:relative;max-width:1100px;height:300px;margin:75px auto 0;perspective:1000px}.fan-card{position:absolute;width:210px;height:290px;border:6px solid white;border-radius:23px;overflow:hidden;box-shadow:0 15px 35px #68200020;left:50%;top:0;transform-origin:50% 100%;transition:margin-top .4s}.fan-card:hover{margin-top:-18px}.fan-card:nth-child(1){transform:translate(-510px,70px) rotate(-13deg)}.fan-card:nth-child(2){transform:translate(-310px,20px) rotate(-6deg)}.fan-card:nth-child(3){transform:translate(-105px,0) rotate(0deg)}.fan-card:nth-child(4){transform:translate(100px,20px) rotate(6deg)}.fan-card:nth-child(5){transform:translate(300px,70px) rotate(13deg)}.fan-caption{position:absolute;bottom:14px;left:14px;right:14px;font-size:12px;background:#ffffffeb;color:var(--ink);border-radius:100px;padding:9px 12px;display:flex;justify-content:space-between}.capabilities{padding:34px 0;display:flex;align-items:center;justify-content:space-between;gap:25px;border-bottom:1px solid #f1f0f2;color:#81818b}.capabilities small{font-size:13px}.capabilities strong{font-size:21px;letter-spacing:-.04em;font-weight:550}.capabilities strong span{margin-right:9px;color:#aaa}.about{padding-top:95px}.manifesto{font-size:clamp(36px,4.7vw,72px);letter-spacing:-.045em;line-height:1.3;font-weight:500;max-width:1350px}.inline-image{display:inline-block;width:1.9em;height:.95em;border-radius:99px;vertical-align:-.08em;overflow:hidden;margin:0 .08em}.studio-image{margin:60px auto 44px;border-radius:30px;overflow:hidden;height:510px;position:relative}.studio-image img{filter:saturate(.6);transition:transform .9s}.studio-image:hover img{transform:scale(1.03)}.image-note{position:absolute;bottom:25px;left:25px;background:white;border-radius:100px;padding:13px 19px;font-size:14px;display:flex;gap:10px;align-items:center}.image-note i{height:7px;width:7px;background:var(--orange);border-radius:50%}.about-bottom{display:grid;grid-template-columns:1fr 1fr;gap:20%}.about-bottom .intro{font-size:18px;max-width:300px}.studio-mark{display:flex;align-items:center;gap:12px;margin-bottom:18px}.studio-mark .brand-icon{width:45px;height:45px}.about-bottom p{font-size:21px;color:var(--muted)}.about-bottom .btn{margin-top:25px}.work{padding-top:24px}.work-stack{display:flex;flex-direction:column;gap:24px}.project{border-radius:32px;padding:20px;display:grid;grid-template-columns:.85fr 1.15fr;min-height:570px;position:sticky;top:110px;background:#e5ece6;overflow:hidden;box-shadow:0 -4px 30px #00000003}.project:nth-child(2){background:#f1e8db;top:130px}.project:nth-child(3){background:#ffe4d5;top:150px}.project-copy{padding:21px 25px;display:flex;flex-direction:column;justify-content:space-between}.project-meta{display:flex;justify-content:space-between;gap:20px;font-size:14px}.project h3{font-size:clamp(42px,4.5vw,68px);margin:50px 0 17px}.project p{font-size:20px;max-width:430px}.tags{display:flex;gap:7px;flex-wrap:wrap;margin:26px 0}.tags span{font-size:12px;border:1px solid #11111120;border-radius:99px;padding:7px 12px}.project-image{border-radius:22px;overflow:hidden;position:relative;min-height:400px}.project-image>img{transition:transform 1s}.project:hover .project-image>img{transform:scale(1.04)}.mock-browser{position:absolute;inset:12% 7%;background:#fff;border-radius:13px;box-shadow:0 25px 60px #0004;overflow:hidden;text-align:left}.browser-bar{height:28px;background:#f5f5f5;border-bottom:1px solid #eee;display:flex;align-items:center;gap:4px;padding:0 10px}.browser-bar i{width:5px;height:5px;background:#d7d7d7;border-radius:50%}.browser-bar small{font-size:7px;margin:auto;color:#999}.mock-inner{padding:25px;height:calc(100% - 28px)}.mock-inner .mock-nav{display:flex;justify-content:space-between;font-size:9px;margin-bottom:45px}.mock-inner h4{font-size:39px;letter-spacing:-.06em;font-weight:500;line-height:1.1;margin:10px 0}.mock-inner p{font-size:10px;max-width:200px}.mock-inner .mock-button{display:inline-block;background:var(--orange);border-radius:6px;color:white;padding:9px 14px;font-size:9px;margin:14px 0}.mock-stats{display:flex;gap:10px;margin-top:20px}.mock-stats>div{background:#f5f5f5;flex:1;padding:13px;border-radius:8px;font-size:8px}.mock-stats b{display:block;font-size:21px;margin-bottom:6px;font-weight:500}.mock-phone{position:absolute;width:210px;height:380px;top:50%;left:50%;transform:translate(-50%,-50%) rotate(-8deg);border:7px solid #242424;background:#fff;border-radius:31px;box-shadow:20px 30px 70px #0005;overflow:hidden}.phone-head{font-size:8px;display:flex;justify-content:space-between;padding:12px 14px}.phone-body{padding:10px 14px}.phone-body h4{font-size:24px;font-weight:550;letter-spacing:-.05em;margin:5px 0 15px}.phone-body img{height:155px;border-radius:14px}.phone-body p{font-size:11px;margin:10px 0}.phone-body small{font-size:8px;color:#777}.automation-ui{background:#f7f7f2ee;position:absolute;inset:12% 8%;border-radius:16px;padding:25px;box-shadow:0 20px 60px #0002}.automation-ui h4{font-size:16px;margin:0 0 9px}.automation-ui p{font-size:10px}.flow-node{background:white;border:1px solid #ddd;border-radius:10px;padding:15px;font-size:11px;margin:12px auto;max-width:200px;display:flex;align-items:center;gap:10px}.flow-node b{background:#ffe5d6;padding:7px;border-radius:7px;color:#d13d00}.flow-line{height:16px;border-left:1px dashed var(--orange);width:1px;margin:auto}.services{padding:0 0 100px}.services-panel{padding:46px;background:radial-gradient(at 80% 0%,#ff7735,var(--orange) 60%,#e54000);color:#fff;border-radius:34px}.services-panel .section-head{margin-bottom:42px}.services-panel .section-head p{color:#fff0e8;max-width:500px}.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:44px}.tab{border:1px solid #ffffff50;background:transparent;color:white;border-radius:100px;font-size:14px;padding:13px 19px;transition:background .2s,color .2s}.tab[aria-selected=true]{background:white;color:var(--ink);border-color:white}.service-content{display:grid;grid-template-columns:1fr 1fr;gap:50px;min-height:410px}.service-copy h3{font-size:clamp(30px,3vw,47px);line-height:1.18;max-width:480px}.service-copy ul{list-style:none;padding:0;margin:30px 0}.service-copy li{font-size:17px;margin:17px 0}.service-copy li:before{content:'✓';margin-right:13px;color:#ffdec9}.service-foot{border-top:1px solid #ffffff30;padding-top:22px;font-size:13px;color:#ffe7db}.service-image{border-radius:24px;overflow:hidden;max-height:460px}.process{background:var(--pale)}.process .section-head{align-items:flex-start}.big-number{font-size:clamp(64px,7vw,110px);color:var(--orange);letter-spacing:-.065em;line-height:1}.process-aside{text-align:right}.process-aside p{font-size:13px;margin-top:10px}.timeline{border:1px solid var(--line);border-radius:30px;background:white;position:relative;padding:36px 24px;display:grid;grid-template-columns:repeat(6,1fr);gap:10px;min-height:360px}.timeline:before{content:'';height:1px;background:#dedce0;position:absolute;top:50%;left:0;right:0}.milestone{display:flex;flex-direction:column;position:relative;justify-content:flex-start}.milestone:nth-child(even){justify-content:flex-end}.milestone-card{border:1px solid var(--line);border-radius:17px;padding:17px 14px;min-height:115px;background:white}.milestone-card span{font-size:11px;color:#b13700}.milestone-card h3{font-size:16px;letter-spacing:-.025em;margin:12px 0}.milestone-card small{color:var(--muted);font-size:11px}.milestone:last-child .milestone-card{background:var(--orange);color:#fff;border-color:var(--orange)}.milestone:last-child .milestone-card span,.milestone:last-child .milestone-card small{color:white}.timeline-dot{position:absolute;top:50%;left:50%;width:10px;height:10px;transform:translate(-50%,-50%);background:white;border:2px solid var(--orange);border-radius:50%}.principles-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.principle{border-radius:26px;background:var(--pale);padding:32px;min-height:275px;display:flex;flex-direction:column}.principle:first-child{grid-column:span 2}.principle:last-child{grid-column:span 2}.principle h3{font-size:clamp(27px,2.5vw,38px);line-height:1.22;margin:23px 0}.principle p{color:var(--muted);font-size:16px;max-width:650px}.principle .eyebrow{color:#b23c06}.faq{display:grid;grid-template-columns:1fr 1.85fr;gap:75px;padding-top:0}.faq-intro p{font-size:17px;margin:28px 0}.accordion details{border-top:1px solid var(--line)}.accordion details:last-child{border-bottom:1px solid var(--line)}.accordion summary{list-style:none;cursor:pointer;padding:25px 28px 25px 0;font-size:20px;position:relative;font-weight:500;letter-spacing:-.02em}.accordion summary::-webkit-details-marker{display:none}.accordion summary:after{content:'+';position:absolute;right:1px;top:23px;font-size:25px;font-weight:400}.accordion details[open] summary:after{content:'−';color:var(--orange)}.accordion details p{font-size:17px;color:var(--muted);padding:0 30px 28px 0;line-height:1.6}.journal{padding-top:30px}.journal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.journal-card{padding:0;text-align:left;border:0;background:none;color:inherit}.journal-image{height:270px;border-radius:23px;overflow:hidden}.journal-image img{transition:transform .8s}.journal-card:hover img{transform:scale(1.06)}.journal-meta{font-size:12px;display:flex;gap:13px;margin:20px 0}.journal-meta span:first-child{color:#b93b00}.journal-meta span:last-child{color:var(--muted)}.journal-card h3{font-size:29px;line-height:1.2;letter-spacing:-.035em}.contact{background:var(--orange);color:white;padding:90px 0 0}.contact-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:95px}.contact h2{font-size:clamp(56px,6.3vw,96px);line-height:1;max-width:650px}.contact-intro>p{font-size:21px;color:#fff0e8;max-width:490px;margin:35px 0 44px}.contact-info{margin:28px 0}.contact-info small{display:block;color:#ffe3d3;font-size:13px;margin-bottom:7px}.contact-info p{font-size:28px;letter-spacing:-.03em}.form{background:white;border-radius:30px;padding:32px;color:var(--ink)}.form-row{display:grid;grid-template-columns:1fr 1fr;gap:13px}.field{margin-bottom:19px}.field label,.form legend{display:block;font-size:14px;margin-bottom:10px;font-weight:500}.field input,.field textarea{border:1px solid #dddbe1;background:var(--pale);border-radius:14px;padding:15px;width:100%;font-size:15px;outline:0;transition:border-color .2s,box-shadow .2s}.field input:focus,.field textarea:focus{border-color:var(--orange);box-shadow:0 0 0 3px #ff580a13}.field textarea{resize:vertical;min-height:125px}.field input::placeholder,.field textarea::placeholder{color:#929099}.form fieldset{border:0;margin:0 0 21px;padding:0}.budget-options{display:flex;flex-wrap:wrap;gap:8px}.budget-options label{border:1px solid var(--line);border-radius:100px;font-size:13px;padding:10px 12px;display:flex;align-items:center;gap:6px;cursor:pointer}.budget-options label:has(input:checked){border-color:var(--orange);background:#fff3ed}.budget-options input{accent-color:var(--orange);margin:0}.form .btn{width:100%;justify-content:center}.form-note{font-size:11px;color:var(--muted);margin:14px 0 0;line-height:1.5}.form-status{font-size:13px;margin-top:13px;line-height:1.5}.footer{margin-top:80px;padding:42px 0 26px;border-top:1px solid #ffffff30}.footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.15fr;gap:50px}.footer .brand-icon{background:white}.footer .brand-icon:after{background:var(--orange)}.footer p{font-size:16px;color:#ffeadf;margin-top:24px;max-width:320px}.footer h3{font-size:12px;color:#ffe0ce;letter-spacing:0;font-weight:500;margin:0 0 18px}.footer-links{display:flex;flex-direction:column;gap:12px;font-size:16px}.footer-links a:hover{text-decoration:underline;text-underline-offset:4px}.footer-bottom{margin-top:85px;display:flex;justify-content:space-between;color:#ffe0cf;font-size:12px;gap:20px}.footer-bottom button{border:0;background:none;color:inherit;padding:0;font-size:12px}.modal{border:0;border-radius:24px;padding:0;max-width:680px;width:90vw;max-height:85vh;color:var(--ink);box-shadow:0 40px 100px #0004}.modal::backdrop{background:#11111166;backdrop-filter:blur(10px)}.modal-inner{padding:44px}.modal-close{position:absolute;right:18px;top:14px;border:0;background:#f1f1f1;border-radius:50%;width:32px;height:32px;font-size:22px}.modal h2{font-size:38px;line-height:1.1;margin:15px 0 24px}.modal p{margin:16px 0;color:var(--muted);font-size:17px}.modal h3{font-size:22px;margin-top:24px}.skip{position:fixed;top:10px;left:10px;z-index:1000;background:white;padding:12px;transform:translateY(-150%)}.skip:focus{transform:none}.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
-@media(min-width:1800px){:root{--max:1700px}.hero{padding-top:145px}.fan{margin-top:80px;height:340px;max-width:1400px}.fan-card{width:255px;height:350px}.fan-card:nth-child(1){transform:translate(-650px,75px) rotate(-13deg)}.fan-card:nth-child(2){transform:translate(-390px,20px) rotate(-6deg)}.fan-card:nth-child(3){transform:translate(-127px,0)}.fan-card:nth-child(4){transform:translate(135px,20px) rotate(6deg)}.fan-card:nth-child(5){transform:translate(395px,75px) rotate(13deg)}}
-@media(max-width:1000px){.nav{gap:24px}.nav-links{gap:18px}.project{min-height:480px}.project-copy{padding:15px}.project p{font-size:17px}.services-panel{padding:32px}.service-content{gap:30px}.timeline{grid-template-columns:repeat(3,1fr);gap:15px;min-height:auto}.timeline:before,.timeline-dot{display:none}.milestone-card{height:100%}.contact-grid{gap:40px}.form{padding:25px}.footer-grid{gap:25px}.journal-image{height:210px}.journal-card h3{font-size:24px}.studio-image{height:400px}.about-bottom{gap:10%}.faq{gap:40px}.mock-inner h4{font-size:30px}}
-@media(max-width:760px){html{scroll-padding-top:100px}.wrap{width:89%}.section{padding:72px 0}.nav{top:12px;width:calc(100% - 30px);max-width:520px;gap:12px;padding:7px 10px 7px 13px;justify-content:space-between}.nav>.btn{display:none}.brand{font-size:20px}.menu-toggle{display:block}.nav-links{display:none;position:absolute;top:65px;left:0;right:0;border-radius:24px;padding:25px;background:white;box-shadow:0 15px 40px #0002;font-size:18px;align-items:flex-start;gap:23px}.nav-links.open{display:flex;flex-direction:column}.hero{padding:116px 18px 0}.hero-label{font-size:11px;padding:9px 12px}.hero h1{font-size:clamp(44px,10.5vw,72px);margin:25px auto 22px;max-width:580px}.hero h1 br{display:none}.hero p{font-size:16px;max-width:390px}.hero-actions{margin-top:25px;gap:8px}.btn{padding-left:16px;font-size:12px;gap:13px}.btn .arrow{width:31px;height:31px;font-size:21px}.fan{height:230px;margin-top:55px;max-width:100%;}.fan-card{width:145px;height:220px;border-width:4px;border-radius:18px}.fan-card:nth-child(1){transform:translate(-320px,65px) rotate(-18deg)}.fan-card:nth-child(2){transform:translate(-195px,25px) rotate(-9deg)}.fan-card:nth-child(3){transform:translate(-72px,0)}.fan-card:nth-child(4){transform:translate(50px,25px) rotate(9deg)}.fan-card:nth-child(5){transform:translate(175px,65px) rotate(18deg)}.fan-caption{font-size:9px;padding:7px 9px;left:8px;right:8px;bottom:9px}.capabilities{flex-wrap:wrap;padding:26px 0;justify-content:center;column-gap:24px;row-gap:17px}.capabilities small{width:100%;text-align:center;font-size:10px}.capabilities strong{font-size:15px}.capabilities strong:last-child{display:none}.manifesto{font-size:35px;line-height:1.32}.studio-image{height:300px;margin:36px 0 30px;border-radius:22px}.image-note{font-size:11px;bottom:15px;left:15px}.about-bottom{grid-template-columns:1fr;gap:30px}.about-bottom p{font-size:18px}.about-bottom .intro{font-size:15px;max-width:none}.studio-mark{margin-bottom:12px}.section-title{font-size:43px}.section-head{flex-direction:column;align-items:flex-start;gap:24px;margin-bottom:35px}.section-head p{font-size:16px;margin-top:18px}.work{padding-top:0}.project{position:relative;top:auto!important;grid-template-columns:1fr;padding:13px;border-radius:25px;gap:15px}.project-copy{padding:16px}.project-meta{font-size:11px}.project h3{font-size:43px;margin:30px 0 12px}.project p{font-size:16px}.project-image{min-height:340px}.tags{margin-bottom:5px}.services{padding-bottom:70px}.services-panel{padding:28px 22px;border-radius:25px}.tabs{flex-wrap:nowrap;overflow:auto;margin-right:-22px;padding-right:22px;gap:7px;margin-bottom:30px;scrollbar-width:none}.tab{white-space:nowrap;font-size:12px;padding:11px 15px}.service-content{grid-template-columns:1fr;gap:28px}.service-copy h3{font-size:33px}.service-copy li{font-size:15px;margin:13px 0}.service-image{height:285px}.process .section-head{flex-direction:column;gap:30px}.process-aside{text-align:left}.big-number{font-size:70px}.timeline{grid-template-columns:1fr 1fr;padding:16px;gap:10px;border-radius:24px}.milestone-card{padding:15px 12px;border-radius:14px;min-height:130px}.milestone-card h3{font-size:16px}.principles-grid{grid-template-columns:1fr;gap:14px}.principle:first-child,.principle:last-child{grid-column:auto}.principle{padding:25px;min-height:220px}.principle h3{font-size:30px}.faq{grid-template-columns:1fr;gap:35px;padding-top:0}.faq-intro p{margin:22px 0}.accordion summary{font-size:17px;padding:22px 28px 22px 0}.accordion details p{font-size:15px}.journal{padding-top:0}.journal-grid{grid-template-columns:1fr;gap:35px}.journal-image{height:260px}.journal-card h3{font-size:27px}.journal-meta{margin:16px 0 10px}.contact{padding-top:65px}.contact-grid{grid-template-columns:1fr;gap:36px}.contact h2{font-size:57px}.contact-intro>p{font-size:18px;margin:25px 0}.contact-info{margin:20px 0}.contact-info p{font-size:24px}.form{padding:23px;border-radius:25px}.form-row{grid-template-columns:1fr;gap:0}.footer{margin-top:60px;padding-top:32px}.footer-grid{grid-template-columns:1fr 1fr;gap:32px}.footer-grid>div:first-child{grid-column:span 2}.footer p{margin-top:17px;font-size:15px}.footer-links{font-size:14px;gap:10px}.footer-bottom{margin-top:45px;flex-wrap:wrap;font-size:10px}.modal-inner{padding:35px 25px}.modal h2{font-size:30px}.modal p{font-size:15px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.reveal{opacity:1!important;filter:none!important;transform:none!important}}
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>ubbastudio — Software development studio, Delhi</title>
+   <meta name="description"
+      content="ubbastudio is an independent software development studio in Delhi. We design and build websites, apps, digital products and AI automations.">
+   <meta name="theme-color" content="#ff580a">
+   <link rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%23ff580a'/%3E%3Cpath d='M16 32 32 16 48 32 32 48Z' fill='white'/%3E%3C/svg%3E">
+   <link rel="preconnect" href="https://images.unsplash.com">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap"
+      rel="stylesheet">
+   <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.27/dist/lenis.css">
+   <style>
+      :root {
+         --orange: #ff580a;
+         --darkorange: #d83900;
+         --ink: #11111d;
+         --muted: #72727e;
+         --pale: #f4f3f5;
+         --line: #e6e4e8;
+         --radius: 30px;
+         --max: 1440px
+      }
 
-/* Typography & finish: expressive display, quiet supporting type. */
-:root{--display:'Bricolage Grotesque',Helvetica,Arial,sans-serif;--body:Helvetica,'Helvetica Neue',Arial,sans-serif;--ink:#17171b;--muted:#737177;--pale:#f5f4f2;--line:#e6e3df}
-body{font-family:var(--body);text-rendering:optimizeLegibility}h1,h2,.manifesto,.big-number,.project h3,.service-copy h3,.principle h3,.journal-card h3,.mock-inner h4,.phone-body h4{font-family:var(--display);font-optical-sizing:auto;font-weight:550;letter-spacing:-.045em}h3,.milestone-card h3,.modal h3{font-family:var(--body);font-weight:500;letter-spacing:-.02em}.brand{font-family:var(--display);font-weight:700;letter-spacing:-.06em;font-size:22px}.brand-icon{flex-shrink:0}.hero h1{font-size:clamp(54px,6.15vw,108px);line-height:.99;letter-spacing:-.055em;max-width:1320px;margin-top:32px;margin-bottom:30px;text-wrap:balance}.hero p{line-height:1.65;max-width:630px;font-weight:400}.hero-label{font-size:12px;letter-spacing:.015em;padding:11px 17px;background:#ffffff16;border-color:#ffffff24}.hero{background:radial-gradient(ellipse at 50% -15%,#ff8139 0%,#ff580a 56%,#dc3d00 100%)}.hero-actions{margin-top:30px}.hero .fan{margin-top:70px}.hero .btn{min-height:49px}.hero .btn.white{box-shadow:0 3px 0 #a8370014,0 9px 25px #9f30000d}.hero .btn.ghost{background:#d4370012}.hero .btn.ghost:hover{background:#ffffff15}.section-title{line-height:1.04;text-wrap:balance}.section-head p{font-size:17px;line-height:1.65}.section-kicker{display:flex;align-items:center;gap:9px;font-family:var(--body);font-size:11px;font-weight:500;letter-spacing:.09em;text-transform:uppercase;margin-bottom:20px;color:#767279}.section-kicker .lucide{width:15px;height:15px}.services .section-kicker{color:#ffebdf}.manifesto{line-height:1.2;font-size:clamp(37px,4.8vw,74px);letter-spacing:-.04em}.inline-image{width:1.8em;height:.88em;vertical-align:-.06em;border:1px solid #f0efed}.about-bottom p{font-size:20px;line-height:1.65}.about-bottom .intro{font-size:16px;line-height:1.65}.studio-mark strong{font-size:14px;font-weight:500}.studio-image{box-shadow:0 15px 50px #17171b06}.image-note{box-shadow:0 4px 15px #00000007;font-size:12px}.nav{padding:7px 7px 7px 19px;background:#fffffff2;box-shadow:0 5px 30px #77270006;border-color:#ffffffa8;gap:30px}.nav.scrolled{border-color:#e6e3dfb3;box-shadow:0 8px 35px #2422220c}.nav-links{gap:25px;font-size:13px}.nav-links a{position:relative;padding:12px 0;font-weight:500}.nav-links a:after{content:'';position:absolute;bottom:5px;left:0;right:0;height:2px;border-radius:2px;background:var(--orange);transform:scaleX(0);transform-origin:left;transition:transform .25s}.nav-links a:hover:after,.nav-links a[aria-current=true]:after{transform:scaleX(1)}.nav-links a[aria-current=true]{color:#bd3d00}.nav .btn{font-size:13px}.btn{gap:22px;font-weight:500;font-size:14px;transition:transform .3s,box-shadow .3s,background .3s}.btn .arrow{width:36px;height:36px;flex-shrink:0}.btn .arrow .lucide{height:18px;width:18px;stroke-width:1.8}.btn:hover{box-shadow:0 8px 20px #17171b09;transform:translateY(-2px)}.btn:active{transform:translateY(0) scale(.985)}.lucide{width:20px;height:20px;stroke-width:1.7;flex-shrink:0;vertical-align:middle;display:inline-block}.fan-caption{font-size:11px;align-items:center;background:#fffffff2;padding:10px 12px}.fan-caption .lucide{height:14px;width:14px}.fan-card{box-shadow:0 25px 50px #76260018}.capabilities{padding:37px 0;color:#77747a}.capabilities strong{display:flex;align-items:center;gap:12px;font-size:18px;letter-spacing:-.035em;font-weight:500}.capabilities .lucide{color:#a29da3;width:23px;height:23px}.capabilities small{font-size:10px;letter-spacing:.08em}.project{border:1px solid #00000003;box-shadow:0 -8px 30px #17171b04}.project-copy{padding:24px 28px}.project-meta{font-size:12px;letter-spacing:.01em;align-items:center}.project-meta>span:last-child{border:1px solid #17171b22;padding:5px 10px;border-radius:99px;font-size:10px}.project h3{line-height:1.05}.project p{font-size:18px;line-height:1.6;max-width:390px}.project .tags span{font-size:11px;background:#ffffff1c}.mock-inner h4{font-weight:550}.phone-head .lucide{width:12px;height:12px}.phone-head>span{display:flex;gap:4px}.flow-node{box-shadow:0 3px 8px #17171b03;font-size:10px}.flow-node b{display:grid;place-items:center}.flow-node b .lucide{height:15px;width:15px}.services-panel{padding:48px;background:radial-gradient(at 90% 0%,#ff803c,var(--orange) 65%,#e34400)}.service-copy h3{line-height:1.12;letter-spacing:-.035em}.service-copy ul{margin:28px 0 30px}.service-copy li{display:flex;align-items:center;gap:12px;font-size:16px;line-height:1.4}.service-copy li:before{display:none}.service-copy li .lucide{color:#ffe8db;width:17px;height:17px}.service-foot{line-height:1.65;max-width:490px;font-size:12px}.tab{font-size:13px;font-weight:400;padding:13px 18px;transition:background .25s,border-color .25s,box-shadow .25s}.tab:not([aria-selected=true]):hover{background:#ffffff15;border-color:#ffffff80}.tab[aria-selected=true]{box-shadow:0 3px 8px #bd30000c}.service-image{border:1px solid #ffffff20}.big-number{font-weight:500;letter-spacing:-.065em}.process-aside p{font-size:12px}.timeline{padding:30px 23px;min-height:380px}.milestone-card{padding:18px 15px;min-height:130px;box-shadow:0 3px 12px #17171b02;transition:transform .3s,box-shadow .3s}.milestone-card:hover{transform:translateY(-3px);box-shadow:0 8px 20px #17171b07}.milestone-card>span{display:flex;gap:6px;align-items:center;font-size:10px}.milestone-card>span .lucide{width:14px;height:14px}.milestone-card h3{font-size:15px;line-height:1.35;letter-spacing:-.02em;font-weight:500}.milestone-card small{font-size:10px;line-height:1.5;display:block}.principle{padding:32px 36px;border:1px solid #efede9;transition:background .3s}.principle:hover{background:#efede9}.principle-top{display:flex;justify-content:space-between;gap:18px;align-items:center}.principle .eyebrow{font-size:10px;letter-spacing:.09em;font-weight:500}.principle-icon{background:white;border:1px solid #eae6e0;border-radius:13px;padding:10px;display:grid;place-items:center;color:#cf4305}.principle-icon .lucide{width:20px;height:20px}.principle h3{font-weight:500;line-height:1.14;margin:24px 0 18px;letter-spacing:-.035em}.principle p{font-size:15px;line-height:1.7}.accordion summary{padding:25px 42px 25px 0;font-size:19px;font-weight:400;line-height:1.35}.accordion summary:after{display:none}.faq-icon{position:absolute;top:25px;right:1px;height:19px;width:19px;transition:transform .25s,color .25s}.accordion details[open] .faq-icon{transform:rotate(45deg);color:#c74308}.accordion details[open] summary{color:#bd3c03}.accordion details p{font-size:16px;line-height:1.75}.faq-intro p{font-size:16px;line-height:1.7}.journal-card h3{font-weight:500;font-size:29px;line-height:1.13;letter-spacing:-.035em;padding-right:12px}.journal-arrow{width:21px;height:21px;margin-left:2px;transition:transform .3s;color:#adabae}.journal-card:hover .journal-arrow{transform:translate(3px,-3px);color:var(--orange)}.journal-image{border:1px solid #17171b05}.journal-meta{font-size:11px;align-items:center;gap:12px}.journal-meta>span+span:before{content:'·';margin-right:12px;color:#c3bec4}.contact h2{font-weight:550;letter-spacing:-.055em;line-height:.98}.contact-intro>p{font-size:19px;line-height:1.65;max-width:440px}.contact-info small{display:flex;gap:7px;align-items:center;font-size:11px;letter-spacing:.02em}.contact-info small .lucide{height:13px;width:13px}.contact-info p{font-family:var(--display);font-weight:500;font-size:28px;letter-spacing:-.035em}.contact-info p .lucide{width:23px;height:23px}.form{padding:34px;border:1px solid #ffffffc4;box-shadow:0 20px 70px #ae300017}.field label,.form legend{font-size:12px;font-weight:500}.field input,.field textarea{background:#f7f6f4;border-color:#e8e4df;font-size:14px;padding:16px;border-radius:12px}.field input:hover,.field textarea:hover{border-color:#cbc6c0}.field input:focus,.field textarea:focus{background:white}.budget-options label{font-size:12px;padding:10px 12px;transition:background .2s,border-color .2s}.budget-options label:hover{background:#faf8f6}.form .btn{margin-top:3px;min-height:49px}.form .btn:disabled{opacity:.65;cursor:wait}.form-note{font-size:10px;line-height:1.6}.footer h3{font-size:11px;letter-spacing:.02em;font-family:var(--body)}.footer p{font-size:15px;line-height:1.7}.footer-links{font-size:15px;gap:14px}.footer-bottom a{display:flex;align-items:center;gap:8px}.footer-bottom .lucide{width:14px;height:14px}.modal h2{font-family:var(--display);font-weight:550;letter-spacing:-.04em}.modal h3{font-family:var(--body);font-weight:500;font-size:19px;letter-spacing:-.02em}.modal p{line-height:1.75;font-size:16px}.modal-close{display:grid;place-items:center;transition:background .2s,transform .2s}.modal-close:hover{background:#ffe3d3;transform:rotate(90deg)}.modal-close .lucide{width:17px;height:17px}.menu-toggle{align-items:center;justify-content:center}.menu-close-icon{display:none}.menu-toggle[aria-expanded=true] .menu-open-icon{display:none}.menu-toggle[aria-expanded=true] .menu-close-icon{display:inline-block}.menu-toggle .lucide{width:21px;height:21px}
-@media(max-width:1100px){.capabilities{gap:18px}.capabilities strong{font-size:16px;gap:8px}.capabilities small{font-size:8px}.services-panel{padding:36px}.project-copy{padding:18px}.project p{font-size:17px}.timeline{gap:9px}.milestone-card{padding:17px 12px}.nav{gap:26px}.nav-links{gap:22px}.principle{padding:30px}.journal-card h3{font-size:26px}}
-@media(max-width:760px){.nav{gap:14px;padding:9px 13px 9px 16px}.nav .brand{font-size:22px}.nav-links a{padding:4px 0}.nav-links a:after{bottom:-3px}.menu-toggle{display:flex}.hero{padding-top:120px}.hero-label{font-size:10px;letter-spacing:.01em;padding:10px 12px}.hero h1{font-size:clamp(46px,10.9vw,75px);line-height:1.01;letter-spacing:-.055em;margin:27px auto 23px;max-width:580px}.hero p{font-size:15px;line-height:1.65;max-width:370px}.hero-actions{gap:8px;margin-top:26px}.hero .btn{min-height:46px;font-size:12px}.btn{gap:14px;font-size:12px}.btn .arrow{width:32px;height:32px}.btn .arrow .lucide{width:16px;height:16px}.hero .fan{margin-top:52px}.fan-caption{font-size:9px;padding:8px 10px}.fan-caption .lucide{height:12px;width:12px}.capabilities{gap:19px;padding:27px 0}.capabilities small{font-size:9px}.capabilities strong{font-size:13px;gap:7px}.capabilities .lucide{width:18px;height:18px}.manifesto{font-size:clamp(33px,8.7vw,45px);line-height:1.23}.section-title{font-size:44px}.section-head p{font-size:15px;line-height:1.65}.section-kicker{font-size:9px;margin-bottom:16px;gap:7px}.section-kicker .lucide{height:13px;width:13px}.about-bottom p{font-size:17px}.about-bottom .intro{font-size:15px}.project-copy{padding:15px}.project h3{font-size:46px}.project p{font-size:16px;max-width:none}.project-meta{font-size:10px}.project-meta>span:last-child{font-size:9px}.tags{gap:6px}.project .tags span{font-size:10px}.services-panel{padding:28px 22px}.service-copy h3{font-size:34px;line-height:1.13}.service-copy li{font-size:14px;gap:10px}.service-foot{font-size:11px}.tab{font-size:12px}.timeline{padding:15px;min-height:0;gap:10px}.milestone-card{min-height:145px;padding:16px 12px}.milestone-card h3{font-size:15px}.milestone-card>span{font-size:9px;gap:5px}.milestone-card>span .lucide{height:12px;width:12px}.big-number{font-size:76px}.principle{padding:26px}.principle h3{font-size:31px;line-height:1.16}.principle p{font-size:14px}.principle .eyebrow{font-size:9px}.principle-icon{padding:9px;border-radius:12px}.principle-icon .lucide{width:18px;height:18px}.accordion summary{font-size:17px;padding:23px 33px 23px 0}.faq-icon{top:25px;height:17px;width:17px}.accordion details p{font-size:15px}.journal-card h3{font-size:28px;line-height:1.16}.journal-arrow{height:19px;width:19px}.contact h2{font-size:clamp(55px,13vw,72px)}.contact-intro>p{font-size:17px}.contact-info p{font-size:26px}.form{padding:25px 22px}.form .field input,.form .field textarea{font-size:16px}.budget-options label{font-size:11px}.footer-grid{gap:30px}.footer-links{font-size:14px}.footer p{font-size:14px}.footer-bottom{font-size:10px}.footer-bottom button{font-size:10px}.modal p{font-size:15px}.modal h2{font-size:33px}}
-@media(max-width:380px){.hero h1{font-size:43px}.hero .btn{font-size:11px;gap:8px;padding-left:13px}.capabilities{column-gap:14px}.capabilities strong{font-size:12px}.manifesto{font-size:32px}.services-panel{padding:26px 18px}.tabs{margin-right:-18px;padding-right:18px}.form{padding:23px 18px}.section-title{font-size:40px}}
+      * {
+         box-sizing: border-box
+      }
 
-</style>
+      html {
+         scroll-behavior: smooth;
+         scroll-padding-top: 120px
+      }
+
+      body {
+         margin: 0;
+         background: #fff;
+         color: var(--ink);
+         font-family: Helvetica, 'Helvetica Neue', Arial, sans-serif;
+         -webkit-font-smoothing: antialiased
+      }
+
+      button,
+      input,
+      textarea {
+         font: inherit
+      }
+
+      button,
+      a {
+         -webkit-tap-highlight-color: transparent
+      }
+
+      a {
+         color: inherit;
+         text-decoration: none
+      }
+
+      button {
+         cursor: pointer
+      }
+
+      img {
+         display: block;
+         width: 100%;
+         height: 100%;
+         object-fit: cover
+      }
+
+      button:focus-visible,
+      a:focus-visible,
+      summary:focus-visible {
+         outline: 3px solid #12121c;
+         outline-offset: 5px
+      }
+
+      ::selection {
+         background: #ffd8c4;
+         color: #111
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+         margin: 0
+      }
+
+      h1,
+      h2,
+      h3 {
+         font-weight: 500;
+         letter-spacing: -.055em
+      }
+
+      p {
+         line-height: 1.55
+      }
+
+      .wrap {
+         width: min(89.4%, var(--max));
+         margin: auto
+      }
+
+      .section {
+         padding: 108px 0
+      }
+
+      .section-title {
+         font-size: clamp(44px, 5.2vw, 76px);
+         line-height: 1.06
+      }
+
+      .muted {
+         color: var(--muted)
+      }
+
+      .eyebrow {
+         font-size: 13px;
+         text-transform: uppercase;
+         letter-spacing: .14em;
+         font-weight: 600
+      }
+
+      .section-head {
+         display: flex;
+         justify-content: space-between;
+         align-items: flex-end;
+         gap: 40px;
+         margin-bottom: 58px
+      }
+
+      .section-head p {
+         font-size: 18px;
+         max-width: 450px;
+         margin-top: 24px
+      }
+
+      .btn {
+         display: inline-flex;
+         align-items: center;
+         justify-content: space-between;
+         gap: 20px;
+         border: 1px solid var(--line);
+         border-radius: 100px;
+         background: #fff;
+         color: var(--ink);
+         padding: 6px 6px 6px 23px;
+         font-size: 15px;
+         font-weight: 550;
+         white-space: nowrap;
+         transition: transform .25s, box-shadow .25s
+      }
+
+      .btn .arrow {
+         width: 36px;
+         height: 36px;
+         border-radius: 50%;
+         display: grid;
+         place-items: center;
+         background: var(--ink);
+         color: white;
+         font-size: 23px;
+         font-weight: 400;
+         transition: transform .3s
+      }
+
+      .btn:hover {
+         transform: translateY(-3px);
+         box-shadow: 0 8px 25px #0000000c
+      }
+
+      .btn:hover .arrow {
+         transform: rotate(-35deg)
+      }
+
+      .btn.orange {
+         background: var(--orange);
+         color: white;
+         border-color: var(--orange)
+      }
+
+      .btn.orange .arrow {
+         background: white;
+         color: var(--orange)
+      }
+
+      .btn.white .arrow {
+         background: var(--orange)
+      }
+
+      .btn.ghost {
+         color: white;
+         background: #ffffff0b;
+         border-color: #ffffff4d
+      }
+
+      .btn.ghost .arrow {
+         background: white;
+         color: var(--orange)
+      }
+
+      .pill {
+         border-radius: 99px;
+         padding: 10px 17px;
+         border: 1px solid var(--line);
+         font-size: 13px
+      }
+
+      .nav {
+         position: fixed;
+         z-index: 50;
+         top: 18px;
+         left: 50%;
+         transform: translateX(-50%);
+         display: flex;
+         align-items: center;
+         gap: 36px;
+         padding: 7px 7px 7px 20px;
+         background: #fffffff5;
+         border: 1px solid #e4e2e6;
+         border-radius: 100px;
+         backdrop-filter: blur(18px);
+         box-shadow: 0 2px 2px #00000002;
+         transition: box-shadow .3s
+      }
+
+      .nav.scrolled {
+         box-shadow: 0 8px 40px #0000000c
+      }
+
+      .brand {
+         display: inline-flex;
+         align-items: center;
+         gap: 10px;
+         font-size: 20px;
+         font-weight: 700;
+         letter-spacing: -.06em
+      }
+
+      .brand-icon {
+         height: 28px;
+         width: 28px;
+         display: grid;
+         place-items: center;
+         background: var(--orange);
+         border-radius: 50%
+      }
+
+      .brand-icon:after {
+         content: '';
+         width: 11px;
+         height: 11px;
+         border-radius: 2px;
+         background: white;
+         transform: rotate(45deg)
+      }
+
+      .nav-links {
+         display: flex;
+         align-items: center;
+         gap: 26px;
+         font-size: 14px;
+         font-weight: 550
+      }
+
+      .nav-links a {
+         transition: color .2s
+      }
+
+      .nav-links a:hover {
+         color: var(--orange)
+      }
+
+      .menu-toggle {
+         display: none;
+         border: 0;
+         background: none;
+         width: 34px;
+         height: 34px;
+         font-size: 23px
+      }
+
+      .progress {
+         position: fixed;
+         top: 0;
+         left: 0;
+         height: 3px;
+         transform-origin: left;
+         transform: scaleX(0);
+         width: 100%;
+         background: var(--ink);
+         z-index: 100
+      }
+
+      .hero {
+         background: radial-gradient(ellipse at 50% 0%, #ff7931 0%, #ff580a 48%, #cf3600 100%);
+         color: white;
+         text-align: center;
+         padding: 124px 20px 0;
+         overflow: hidden;
+         position: relative
+      }
+
+      .hero-label {
+         display: inline-flex;
+         align-items: center;
+         gap: 10px;
+         background: #ffffff20;
+         border: 1px solid #ffffff16;
+         border-radius: 99px;
+         padding: 10px 18px;
+         font-size: 14px;
+         font-weight: 500
+      }
+
+      .live-dot {
+         width: 7px;
+         height: 7px;
+         background: #fff;
+         border-radius: 50%;
+         box-shadow: 0 0 0 4px #ffffff1c
+      }
+
+      .hero h1 {
+         font-size: clamp(52px, 5.75vw, 100px);
+         line-height: 1.02;
+         max-width: 1250px;
+         margin: 29px auto 26px;
+         letter-spacing: -.055em
+      }
+
+      .hero p {
+         font-size: clamp(17px, 1.45vw, 24px);
+         max-width: 650px;
+         margin: 0 auto;
+         color: #fff3eb;
+         line-height: 1.5
+      }
+
+      .hero-actions {
+         display: flex;
+         justify-content: center;
+         gap: 10px;
+         margin-top: 28px
+      }
+
+      .fan {
+         position: relative;
+         max-width: 1100px;
+         height: 300px;
+         margin: 75px auto 0;
+         perspective: 1000px
+      }
+
+      .fan-card {
+         position: absolute;
+         width: 210px;
+         height: 290px;
+         border: 6px solid white;
+         border-radius: 23px;
+         overflow: hidden;
+         box-shadow: 0 15px 35px #68200020;
+         left: 50%;
+         top: 0;
+         transform-origin: 50% 100%;
+         transition: margin-top .4s
+      }
+
+      .fan-card:hover {
+         margin-top: -18px
+      }
+
+      .fan-card:nth-child(1) {
+         transform: translate(-510px, 70px) rotate(-13deg)
+      }
+
+      .fan-card:nth-child(2) {
+         transform: translate(-310px, 20px) rotate(-6deg)
+      }
+
+      .fan-card:nth-child(3) {
+         transform: translate(-105px, 0) rotate(0deg)
+      }
+
+      .fan-card:nth-child(4) {
+         transform: translate(100px, 20px) rotate(6deg)
+      }
+
+      .fan-card:nth-child(5) {
+         transform: translate(300px, 70px) rotate(13deg)
+      }
+
+      .fan-caption {
+         position: absolute;
+         bottom: 14px;
+         left: 14px;
+         right: 14px;
+         font-size: 12px;
+         background: #ffffffeb;
+         color: var(--ink);
+         border-radius: 100px;
+         padding: 9px 12px;
+         display: flex;
+         justify-content: space-between
+      }
+
+      .capabilities {
+         padding: 34px 0;
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         gap: 25px;
+         border-bottom: 1px solid #f1f0f2;
+         color: #81818b
+      }
+
+      .capabilities small {
+         font-size: 13px
+      }
+
+      .capabilities strong {
+         font-size: 21px;
+         letter-spacing: -.04em;
+         font-weight: 550
+      }
+
+      .capabilities strong span {
+         margin-right: 9px;
+         color: #aaa
+      }
+
+      .about {
+         padding-top: 95px
+      }
+
+      .manifesto {
+         font-size: clamp(36px, 4.7vw, 72px);
+         letter-spacing: -.045em;
+         line-height: 1.3;
+         font-weight: 500;
+         max-width: 1350px
+      }
+
+      .inline-image {
+         display: inline-block;
+         width: 1.9em;
+         height: .95em;
+         border-radius: 99px;
+         vertical-align: -.08em;
+         overflow: hidden;
+         margin: 0 .08em
+      }
+
+      .studio-image {
+         margin: 60px auto 44px;
+         border-radius: 30px;
+         overflow: hidden;
+         height: 510px;
+         position: relative
+      }
+
+      .studio-image img {
+         filter: saturate(.6);
+         transition: transform .9s
+      }
+
+      .studio-image:hover img {
+         transform: scale(1.03)
+      }
+
+      .image-note {
+         position: absolute;
+         bottom: 25px;
+         left: 25px;
+         background: white;
+         border-radius: 100px;
+         padding: 13px 19px;
+         font-size: 14px;
+         display: flex;
+         gap: 10px;
+         align-items: center
+      }
+
+      .image-note i {
+         height: 7px;
+         width: 7px;
+         background: var(--orange);
+         border-radius: 50%
+      }
+
+      .about-bottom {
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         gap: 20%
+      }
+
+      .about-bottom .intro {
+         font-size: 18px;
+         max-width: 300px
+      }
+
+      .studio-mark {
+         display: flex;
+         align-items: center;
+         gap: 12px;
+         margin-bottom: 18px
+      }
+
+      .studio-mark .brand-icon {
+         width: 45px;
+         height: 45px
+      }
+
+      .about-bottom p {
+         font-size: 21px;
+         color: var(--muted)
+      }
+
+      .about-bottom .btn {
+         margin-top: 25px
+      }
+
+      .work {
+         padding-top: 24px
+      }
+
+      .work-stack {
+         display: flex;
+         flex-direction: column;
+         gap: 24px
+      }
+
+      .project {
+         border-radius: 32px;
+         padding: 20px;
+         display: grid;
+         grid-template-columns: .85fr 1.15fr;
+         min-height: 570px;
+         position: sticky;
+         top: 110px;
+         background: #e5ece6;
+         overflow: hidden;
+         box-shadow: 0 -4px 30px #00000003
+      }
+
+      .project:nth-child(2) {
+         background: #f1e8db;
+         top: 130px
+      }
+
+      .project:nth-child(3) {
+         background: #ffe4d5;
+         top: 150px
+      }
+
+      .project-copy {
+         padding: 21px 25px;
+         display: flex;
+         flex-direction: column;
+         justify-content: space-between
+      }
+
+      .project-meta {
+         display: flex;
+         justify-content: space-between;
+         gap: 20px;
+         font-size: 14px
+      }
+
+      .project h3 {
+         font-size: clamp(42px, 4.5vw, 68px);
+         margin: 50px 0 17px
+      }
+
+      .project p {
+         font-size: 20px;
+         max-width: 430px
+      }
+
+      .tags {
+         display: flex;
+         gap: 7px;
+         flex-wrap: wrap;
+         margin: 26px 0
+      }
+
+      .tags span {
+         font-size: 12px;
+         border: 1px solid #11111120;
+         border-radius: 99px;
+         padding: 7px 12px
+      }
+
+      .project-image {
+         border-radius: 22px;
+         overflow: hidden;
+         position: relative;
+         min-height: 400px
+      }
+
+      .project-image>img {
+         transition: transform 1s
+      }
+
+      .project:hover .project-image>img {
+         transform: scale(1.04)
+      }
+
+      .mock-browser {
+         position: absolute;
+         inset: 12% 7%;
+         background: #fff;
+         border-radius: 13px;
+         box-shadow: 0 25px 60px #0004;
+         overflow: hidden;
+         text-align: left
+      }
+
+      .browser-bar {
+         height: 28px;
+         background: #f5f5f5;
+         border-bottom: 1px solid #eee;
+         display: flex;
+         align-items: center;
+         gap: 4px;
+         padding: 0 10px
+      }
+
+      .browser-bar i {
+         width: 5px;
+         height: 5px;
+         background: #d7d7d7;
+         border-radius: 50%
+      }
+
+      .browser-bar small {
+         font-size: 7px;
+         margin: auto;
+         color: #999
+      }
+
+      .mock-inner {
+         padding: 25px;
+         height: calc(100% - 28px)
+      }
+
+      .mock-inner .mock-nav {
+         display: flex;
+         justify-content: space-between;
+         font-size: 9px;
+         margin-bottom: 45px
+      }
+
+      .mock-inner h4 {
+         font-size: 39px;
+         letter-spacing: -.06em;
+         font-weight: 500;
+         line-height: 1.1;
+         margin: 10px 0
+      }
+
+      .mock-inner p {
+         font-size: 10px;
+         max-width: 200px
+      }
+
+      .mock-inner .mock-button {
+         display: inline-block;
+         background: var(--orange);
+         border-radius: 6px;
+         color: white;
+         padding: 9px 14px;
+         font-size: 9px;
+         margin: 14px 0
+      }
+
+      .mock-stats {
+         display: flex;
+         gap: 10px;
+         margin-top: 20px
+      }
+
+      .mock-stats>div {
+         background: #f5f5f5;
+         flex: 1;
+         padding: 13px;
+         border-radius: 8px;
+         font-size: 8px
+      }
+
+      .mock-stats b {
+         display: block;
+         font-size: 21px;
+         margin-bottom: 6px;
+         font-weight: 500
+      }
+
+      .mock-phone {
+         position: absolute;
+         width: 210px;
+         height: 380px;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%) rotate(-8deg);
+         border: 7px solid #242424;
+         background: #fff;
+         border-radius: 31px;
+         box-shadow: 20px 30px 70px #0005;
+         overflow: hidden
+      }
+
+      .phone-head {
+         font-size: 8px;
+         display: flex;
+         justify-content: space-between;
+         padding: 12px 14px
+      }
+
+      .phone-body {
+         padding: 10px 14px
+      }
+
+      .phone-body h4 {
+         font-size: 24px;
+         font-weight: 550;
+         letter-spacing: -.05em;
+         margin: 5px 0 15px
+      }
+
+      .phone-body img {
+         height: 155px;
+         border-radius: 14px
+      }
+
+      .phone-body p {
+         font-size: 11px;
+         margin: 10px 0
+      }
+
+      .phone-body small {
+         font-size: 8px;
+         color: #777
+      }
+
+      .automation-ui {
+         background: #f7f7f2ee;
+         position: absolute;
+         inset: 12% 8%;
+         border-radius: 16px;
+         padding: 25px;
+         box-shadow: 0 20px 60px #0002
+      }
+
+      .automation-ui h4 {
+         font-size: 16px;
+         margin: 0 0 9px
+      }
+
+      .automation-ui p {
+         font-size: 10px
+      }
+
+      .flow-node {
+         background: white;
+         border: 1px solid #ddd;
+         border-radius: 10px;
+         padding: 15px;
+         font-size: 11px;
+         margin: 12px auto;
+         max-width: 200px;
+         display: flex;
+         align-items: center;
+         gap: 10px
+      }
+
+      .flow-node b {
+         background: #ffe5d6;
+         padding: 7px;
+         border-radius: 7px;
+         color: #d13d00
+      }
+
+      .flow-line {
+         height: 16px;
+         border-left: 1px dashed var(--orange);
+         width: 1px;
+         margin: auto
+      }
+
+      .services {
+         padding: 0 0 100px
+      }
+
+      .services-panel {
+         padding: 46px;
+         background: radial-gradient(at 80% 0%, #ff7735, var(--orange) 60%, #e54000);
+         color: #fff;
+         border-radius: 34px
+      }
+
+      .services-panel .section-head {
+         margin-bottom: 42px
+      }
+
+      .services-panel .section-head p {
+         color: #fff0e8;
+         max-width: 500px
+      }
+
+      .tabs {
+         display: flex;
+         gap: 8px;
+         flex-wrap: wrap;
+         margin-bottom: 44px
+      }
+
+      .tab {
+         border: 1px solid #ffffff50;
+         background: transparent;
+         color: white;
+         border-radius: 100px;
+         font-size: 14px;
+         padding: 13px 19px;
+         transition: background .2s, color .2s
+      }
+
+      .tab[aria-selected=true] {
+         background: white;
+         color: var(--ink);
+         border-color: white
+      }
+
+      .service-content {
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         gap: 50px;
+         min-height: 410px
+      }
+
+      .service-copy h3 {
+         font-size: clamp(30px, 3vw, 47px);
+         line-height: 1.18;
+         max-width: 480px
+      }
+
+      .service-copy ul {
+         list-style: none;
+         padding: 0;
+         margin: 30px 0
+      }
+
+      .service-copy li {
+         font-size: 17px;
+         margin: 17px 0
+      }
+
+      .service-copy li:before {
+         content: '✓';
+         margin-right: 13px;
+         color: #ffdec9
+      }
+
+      .service-foot {
+         border-top: 1px solid #ffffff30;
+         padding-top: 22px;
+         font-size: 13px;
+         color: #ffe7db
+      }
+
+      .service-image {
+         border-radius: 24px;
+         overflow: hidden;
+         max-height: 460px
+      }
+
+      .process {
+         background: var(--pale)
+      }
+
+      .process .section-head {
+         align-items: flex-start
+      }
+
+      .big-number {
+         font-size: clamp(64px, 7vw, 110px);
+         color: var(--orange);
+         letter-spacing: -.065em;
+         line-height: 1
+      }
+
+      .process-aside {
+         text-align: right
+      }
+
+      .process-aside p {
+         font-size: 13px;
+         margin-top: 10px
+      }
+
+      .timeline {
+         border: 1px solid var(--line);
+         border-radius: 30px;
+         background: white;
+         position: relative;
+         padding: 36px 24px;
+         display: grid;
+         grid-template-columns: repeat(6, 1fr);
+         gap: 10px;
+         min-height: 360px
+      }
+
+      .timeline:before {
+         content: '';
+         height: 1px;
+         background: #dedce0;
+         position: absolute;
+         top: 50%;
+         left: 0;
+         right: 0
+      }
+
+      .milestone {
+         display: flex;
+         flex-direction: column;
+         position: relative;
+         justify-content: flex-start
+      }
+
+      .milestone:nth-child(even) {
+         justify-content: flex-end
+      }
+
+      .milestone-card {
+         border: 1px solid var(--line);
+         border-radius: 17px;
+         padding: 17px 14px;
+         min-height: 115px;
+         background: white
+      }
+
+      .milestone-card span {
+         font-size: 11px;
+         color: #b13700
+      }
+
+      .milestone-card h3 {
+         font-size: 16px;
+         letter-spacing: -.025em;
+         margin: 12px 0
+      }
+
+      .milestone-card small {
+         color: var(--muted);
+         font-size: 11px
+      }
+
+      .milestone:last-child .milestone-card {
+         background: var(--orange);
+         color: #fff;
+         border-color: var(--orange)
+      }
+
+      .milestone:last-child .milestone-card span,
+      .milestone:last-child .milestone-card small {
+         color: white
+      }
+
+      .timeline-dot {
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         width: 10px;
+         height: 10px;
+         transform: translate(-50%, -50%);
+         background: white;
+         border: 2px solid var(--orange);
+         border-radius: 50%
+      }
+
+      .principles-grid {
+         display: grid;
+         grid-template-columns: repeat(3, 1fr);
+         gap: 20px
+      }
+
+      .principle {
+         border-radius: 26px;
+         background: var(--pale);
+         padding: 32px;
+         min-height: 275px;
+         display: flex;
+         flex-direction: column
+      }
+
+      .principle:first-child {
+         grid-column: span 2
+      }
+
+      .principle:last-child {
+         grid-column: span 2
+      }
+
+      .principle h3 {
+         font-size: clamp(27px, 2.5vw, 38px);
+         line-height: 1.22;
+         margin: 23px 0
+      }
+
+      .principle p {
+         color: var(--muted);
+         font-size: 16px;
+         max-width: 650px
+      }
+
+      .principle .eyebrow {
+         color: #b23c06
+      }
+
+      .faq {
+         display: grid;
+         grid-template-columns: 1fr 1.85fr;
+         gap: 75px;
+         padding-top: 0
+      }
+
+      .faq-intro p {
+         font-size: 17px;
+         margin: 28px 0
+      }
+
+      .accordion details {
+         border-top: 1px solid var(--line)
+      }
+
+      .accordion details:last-child {
+         border-bottom: 1px solid var(--line)
+      }
+
+      .accordion summary {
+         list-style: none;
+         cursor: pointer;
+         padding: 25px 28px 25px 0;
+         font-size: 20px;
+         position: relative;
+         font-weight: 500;
+         letter-spacing: -.02em
+      }
+
+      .accordion summary::-webkit-details-marker {
+         display: none
+      }
+
+      .accordion summary:after {
+         content: '+';
+         position: absolute;
+         right: 1px;
+         top: 23px;
+         font-size: 25px;
+         font-weight: 400
+      }
+
+      .accordion details[open] summary:after {
+         content: '−';
+         color: var(--orange)
+      }
+
+      .accordion details p {
+         font-size: 17px;
+         color: var(--muted);
+         padding: 0 30px 28px 0;
+         line-height: 1.6
+      }
+
+      .journal {
+         padding-top: 30px
+      }
+
+      .journal-grid {
+         display: grid;
+         grid-template-columns: repeat(3, 1fr);
+         gap: 22px
+      }
+
+      .journal-card {
+         padding: 0;
+         text-align: left;
+         border: 0;
+         background: none;
+         color: inherit
+      }
+
+      .journal-image {
+         height: 270px;
+         border-radius: 23px;
+         overflow: hidden
+      }
+
+      .journal-image img {
+         transition: transform .8s
+      }
+
+      .journal-card:hover img {
+         transform: scale(1.06)
+      }
+
+      .journal-meta {
+         font-size: 12px;
+         display: flex;
+         gap: 13px;
+         margin: 20px 0
+      }
+
+      .journal-meta span:first-child {
+         color: #b93b00
+      }
+
+      .journal-meta span:last-child {
+         color: var(--muted)
+      }
+
+      .journal-card h3 {
+         font-size: 29px;
+         line-height: 1.2;
+         letter-spacing: -.035em
+      }
+
+      .contact {
+         background: var(--orange);
+         color: white;
+         padding: 90px 0 0
+      }
+
+      .contact-grid {
+         display: grid;
+         grid-template-columns: 1.2fr 1fr;
+         gap: 95px
+      }
+
+      .contact h2 {
+         font-size: clamp(56px, 6.3vw, 96px);
+         line-height: 1;
+         max-width: 650px
+      }
+
+      .contact-intro>p {
+         font-size: 21px;
+         color: #fff0e8;
+         max-width: 490px;
+         margin: 35px 0 44px
+      }
+
+      .contact-info {
+         margin: 28px 0
+      }
+
+      .contact-info small {
+         display: block;
+         color: #ffe3d3;
+         font-size: 13px;
+         margin-bottom: 7px
+      }
+
+      .contact-info p {
+         font-size: 28px;
+         letter-spacing: -.03em
+      }
+
+      .form {
+         background: white;
+         border-radius: 30px;
+         padding: 32px;
+         color: var(--ink)
+      }
+
+      .form-row {
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         gap: 13px
+      }
+
+      .field {
+         margin-bottom: 19px
+      }
+
+      .field label,
+      .form legend {
+         display: block;
+         font-size: 14px;
+         margin-bottom: 10px;
+         font-weight: 500
+      }
+
+      .field input,
+      .field textarea {
+         border: 1px solid #dddbe1;
+         background: var(--pale);
+         border-radius: 14px;
+         padding: 15px;
+         width: 100%;
+         font-size: 15px;
+         outline: 0;
+         transition: border-color .2s, box-shadow .2s
+      }
+
+      .field input:focus,
+      .field textarea:focus {
+         border-color: var(--orange);
+         box-shadow: 0 0 0 3px #ff580a13
+      }
+
+      .field textarea {
+         resize: vertical;
+         min-height: 125px
+      }
+
+      .field input::placeholder,
+      .field textarea::placeholder {
+         color: #929099
+      }
+
+      .form fieldset {
+         border: 0;
+         margin: 0 0 21px;
+         padding: 0
+      }
+
+      .budget-options {
+         display: flex;
+         flex-wrap: wrap;
+         gap: 8px
+      }
+
+      .budget-options label {
+         border: 1px solid var(--line);
+         border-radius: 100px;
+         font-size: 13px;
+         padding: 10px 12px;
+         display: flex;
+         align-items: center;
+         gap: 6px;
+         cursor: pointer
+      }
+
+      .budget-options label:has(input:checked) {
+         border-color: var(--orange);
+         background: #fff3ed
+      }
+
+      .budget-options input {
+         accent-color: var(--orange);
+         margin: 0
+      }
+
+      .form .btn {
+         width: 100%;
+         justify-content: center
+      }
+
+      .form-note {
+         font-size: 11px;
+         color: var(--muted);
+         margin: 14px 0 0;
+         line-height: 1.5
+      }
+
+      .form-status {
+         font-size: 13px;
+         margin-top: 13px;
+         line-height: 1.5
+      }
+
+      .footer {
+         margin-top: 80px;
+         padding: 42px 0 26px;
+         border-top: 1px solid #ffffff30
+      }
+
+      .footer-grid {
+         display: grid;
+         grid-template-columns: 1.6fr 1fr 1fr 1.15fr;
+         gap: 50px
+      }
+
+      .footer .brand-icon {
+         background: white
+      }
+
+      .footer .brand-icon:after {
+         background: var(--orange)
+      }
+
+      .footer p {
+         font-size: 16px;
+         color: #ffeadf;
+         margin-top: 24px;
+         max-width: 320px
+      }
+
+      .footer h3 {
+         font-size: 12px;
+         color: #ffe0ce;
+         letter-spacing: 0;
+         font-weight: 500;
+         margin: 0 0 18px
+      }
+
+      .footer-links {
+         display: flex;
+         flex-direction: column;
+         gap: 12px;
+         font-size: 16px
+      }
+
+      .footer-links a:hover {
+         text-decoration: underline;
+         text-underline-offset: 4px
+      }
+
+      .footer-bottom {
+         margin-top: 85px;
+         display: flex;
+         justify-content: space-between;
+         color: #ffe0cf;
+         font-size: 12px;
+         gap: 20px
+      }
+
+      .footer-bottom button {
+         border: 0;
+         background: none;
+         color: inherit;
+         padding: 0;
+         font-size: 12px
+      }
+
+      .modal {
+         border: 0;
+         border-radius: 24px;
+         padding: 0;
+         max-width: 680px;
+         width: 90vw;
+         max-height: 85vh;
+         color: var(--ink);
+         box-shadow: 0 40px 100px #0004
+      }
+
+      .modal::backdrop {
+         background: #11111166;
+         backdrop-filter: blur(10px)
+      }
+
+      .modal-inner {
+         padding: 44px
+      }
+
+      .modal-close {
+         position: absolute;
+         right: 18px;
+         top: 14px;
+         border: 0;
+         background: #f1f1f1;
+         border-radius: 50%;
+         width: 32px;
+         height: 32px;
+         font-size: 22px
+      }
+
+      .modal h2 {
+         font-size: 38px;
+         line-height: 1.1;
+         margin: 15px 0 24px
+      }
+
+      .modal p {
+         margin: 16px 0;
+         color: var(--muted);
+         font-size: 17px
+      }
+
+      .modal h3 {
+         font-size: 22px;
+         margin-top: 24px
+      }
+
+      .skip {
+         position: fixed;
+         top: 10px;
+         left: 10px;
+         z-index: 1000;
+         background: white;
+         padding: 12px;
+         transform: translateY(-150%)
+      }
+
+      .skip:focus {
+         transform: none
+      }
+
+      .visually-hidden {
+         position: absolute;
+         width: 1px;
+         height: 1px;
+         overflow: hidden;
+         clip: rect(0, 0, 0, 0)
+      }
+
+      @media(min-width:1800px) {
+         :root {
+            --max: 1700px
+         }
+
+         .hero {
+            padding-top: 145px
+         }
+
+         .fan {
+            margin-top: 80px;
+            height: 340px;
+            max-width: 1400px
+         }
+
+         .fan-card {
+            width: 255px;
+            height: 350px
+         }
+
+         .fan-card:nth-child(1) {
+            transform: translate(-650px, 75px) rotate(-13deg)
+         }
+
+         .fan-card:nth-child(2) {
+            transform: translate(-390px, 20px) rotate(-6deg)
+         }
+
+         .fan-card:nth-child(3) {
+            transform: translate(-127px, 0)
+         }
+
+         .fan-card:nth-child(4) {
+            transform: translate(135px, 20px) rotate(6deg)
+         }
+
+         .fan-card:nth-child(5) {
+            transform: translate(395px, 75px) rotate(13deg)
+         }
+      }
+
+      @media(max-width:1000px) {
+         .nav {
+            gap: 24px
+         }
+
+         .nav-links {
+            gap: 18px
+         }
+
+         .project {
+            min-height: 480px
+         }
+
+         .project-copy {
+            padding: 15px
+         }
+
+         .project p {
+            font-size: 17px
+         }
+
+         .services-panel {
+            padding: 32px
+         }
+
+         .service-content {
+            gap: 30px
+         }
+
+         .timeline {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            min-height: auto
+         }
+
+         .timeline:before,
+         .timeline-dot {
+            display: none
+         }
+
+         .milestone-card {
+            height: 100%
+         }
+
+         .contact-grid {
+            gap: 40px
+         }
+
+         .form {
+            padding: 25px
+         }
+
+         .footer-grid {
+            gap: 25px
+         }
+
+         .journal-image {
+            height: 210px
+         }
+
+         .journal-card h3 {
+            font-size: 24px
+         }
+
+         .studio-image {
+            height: 400px
+         }
+
+         .about-bottom {
+            gap: 10%
+         }
+
+         .faq {
+            gap: 40px
+         }
+
+         .mock-inner h4 {
+            font-size: 30px
+         }
+      }
+
+      @media(max-width:760px) {
+         html {
+            scroll-padding-top: 100px
+         }
+
+         .wrap {
+            width: 89%
+         }
+
+         .section {
+            padding: 72px 0
+         }
+
+         .nav {
+            top: 12px;
+            width: calc(100% - 30px);
+            max-width: 520px;
+            gap: 12px;
+            padding: 7px 10px 7px 13px;
+            justify-content: space-between
+         }
+
+         .nav>.btn {
+            display: none
+         }
+
+         .brand {
+            font-size: 20px
+         }
+
+         .menu-toggle {
+            display: block
+         }
+
+         .nav-links {
+            display: none;
+            position: absolute;
+            top: 65px;
+            left: 0;
+            right: 0;
+            border-radius: 24px;
+            padding: 25px;
+            background: white;
+            box-shadow: 0 15px 40px #0002;
+            font-size: 18px;
+            align-items: flex-start;
+            gap: 23px
+         }
+
+         .nav-links.open {
+            display: flex;
+            flex-direction: column
+         }
+
+         .hero {
+            padding: 116px 18px 0
+         }
+
+         .hero-label {
+            font-size: 11px;
+            padding: 9px 12px
+         }
+
+         .hero h1 {
+            font-size: clamp(44px, 10.5vw, 72px);
+            margin: 25px auto 22px;
+            max-width: 580px
+         }
+
+         .hero h1 br {
+            display: none
+         }
+
+         .hero p {
+            font-size: 16px;
+            max-width: 390px
+         }
+
+         .hero-actions {
+            margin-top: 25px;
+            gap: 8px
+         }
+
+         .btn {
+            padding-left: 16px;
+            font-size: 12px;
+            gap: 13px
+         }
+
+         .btn .arrow {
+            width: 31px;
+            height: 31px;
+            font-size: 21px
+         }
+
+         .fan {
+            height: 230px;
+            margin-top: 55px;
+            max-width: 100%;
+         }
+
+         .fan-card {
+            width: 145px;
+            height: 220px;
+            border-width: 4px;
+            border-radius: 18px
+         }
+
+         .fan-card:nth-child(1) {
+            transform: translate(-320px, 65px) rotate(-18deg)
+         }
+
+         .fan-card:nth-child(2) {
+            transform: translate(-195px, 25px) rotate(-9deg)
+         }
+
+         .fan-card:nth-child(3) {
+            transform: translate(-72px, 0)
+         }
+
+         .fan-card:nth-child(4) {
+            transform: translate(50px, 25px) rotate(9deg)
+         }
+
+         .fan-card:nth-child(5) {
+            transform: translate(175px, 65px) rotate(18deg)
+         }
+
+         .fan-caption {
+            font-size: 9px;
+            padding: 7px 9px;
+            left: 8px;
+            right: 8px;
+            bottom: 9px
+         }
+
+         .capabilities {
+            flex-wrap: wrap;
+            padding: 26px 0;
+            justify-content: center;
+            column-gap: 24px;
+            row-gap: 17px
+         }
+
+         .capabilities small {
+            width: 100%;
+            text-align: center;
+            font-size: 10px
+         }
+
+         .capabilities strong {
+            font-size: 15px
+         }
+
+         .capabilities strong:last-child {
+            display: none
+         }
+
+         .manifesto {
+            font-size: 35px;
+            line-height: 1.32
+         }
+
+         .studio-image {
+            height: 300px;
+            margin: 36px 0 30px;
+            border-radius: 22px
+         }
+
+         .image-note {
+            font-size: 11px;
+            bottom: 15px;
+            left: 15px
+         }
+
+         .about-bottom {
+            grid-template-columns: 1fr;
+            gap: 30px
+         }
+
+         .about-bottom p {
+            font-size: 18px
+         }
+
+         .about-bottom .intro {
+            font-size: 15px;
+            max-width: none
+         }
+
+         .studio-mark {
+            margin-bottom: 12px
+         }
+
+         .section-title {
+            font-size: 43px
+         }
+
+         .section-head {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 24px;
+            margin-bottom: 35px
+         }
+
+         .section-head p {
+            font-size: 16px;
+            margin-top: 18px
+         }
+
+         .work {
+            padding-top: 0
+         }
+
+         .project {
+            position: relative;
+            top: auto !important;
+            grid-template-columns: 1fr;
+            padding: 13px;
+            border-radius: 25px;
+            gap: 15px
+         }
+
+         .project-copy {
+            padding: 16px
+         }
+
+         .project-meta {
+            font-size: 11px
+         }
+
+         .project h3 {
+            font-size: 43px;
+            margin: 30px 0 12px
+         }
+
+         .project p {
+            font-size: 16px
+         }
+
+         .project-image {
+            min-height: 340px
+         }
+
+         .tags {
+            margin-bottom: 5px
+         }
+
+         .services {
+            padding-bottom: 70px
+         }
+
+         .services-panel {
+            padding: 28px 22px;
+            border-radius: 25px
+         }
+
+         .tabs {
+            flex-wrap: nowrap;
+            overflow: auto;
+            margin-right: -22px;
+            padding-right: 22px;
+            gap: 7px;
+            margin-bottom: 30px;
+            scrollbar-width: none
+         }
+
+         .tab {
+            white-space: nowrap;
+            font-size: 12px;
+            padding: 11px 15px
+         }
+
+         .service-content {
+            grid-template-columns: 1fr;
+            gap: 28px
+         }
+
+         .service-copy h3 {
+            font-size: 33px
+         }
+
+         .service-copy li {
+            font-size: 15px;
+            margin: 13px 0
+         }
+
+         .service-image {
+            height: 285px
+         }
+
+         .process .section-head {
+            flex-direction: column;
+            gap: 30px
+         }
+
+         .process-aside {
+            text-align: left
+         }
+
+         .big-number {
+            font-size: 70px
+         }
+
+         .timeline {
+            grid-template-columns: 1fr 1fr;
+            padding: 16px;
+            gap: 10px;
+            border-radius: 24px
+         }
+
+         .milestone-card {
+            padding: 15px 12px;
+            border-radius: 14px;
+            min-height: 130px
+         }
+
+         .milestone-card h3 {
+            font-size: 16px
+         }
+
+         .principles-grid {
+            grid-template-columns: 1fr;
+            gap: 14px
+         }
+
+         .principle:first-child,
+         .principle:last-child {
+            grid-column: auto
+         }
+
+         .principle {
+            padding: 25px;
+            min-height: 220px
+         }
+
+         .principle h3 {
+            font-size: 30px
+         }
+
+         .faq {
+            grid-template-columns: 1fr;
+            gap: 35px;
+            padding-top: 0
+         }
+
+         .faq-intro p {
+            margin: 22px 0
+         }
+
+         .accordion summary {
+            font-size: 17px;
+            padding: 22px 28px 22px 0
+         }
+
+         .accordion details p {
+            font-size: 15px
+         }
+
+         .journal {
+            padding-top: 0
+         }
+
+         .journal-grid {
+            grid-template-columns: 1fr;
+            gap: 35px
+         }
+
+         .journal-image {
+            height: 260px
+         }
+
+         .journal-card h3 {
+            font-size: 27px
+         }
+
+         .journal-meta {
+            margin: 16px 0 10px
+         }
+
+         .contact {
+            padding-top: 65px
+         }
+
+         .contact-grid {
+            grid-template-columns: 1fr;
+            gap: 36px
+         }
+
+         .contact h2 {
+            font-size: 57px
+         }
+
+         .contact-intro>p {
+            font-size: 18px;
+            margin: 25px 0
+         }
+
+         .contact-info {
+            margin: 20px 0
+         }
+
+         .contact-info p {
+            font-size: 24px
+         }
+
+         .form {
+            padding: 23px;
+            border-radius: 25px
+         }
+
+         .form-row {
+            grid-template-columns: 1fr;
+            gap: 0
+         }
+
+         .footer {
+            margin-top: 60px;
+            padding-top: 32px
+         }
+
+         .footer-grid {
+            grid-template-columns: 1fr 1fr;
+            gap: 32px
+         }
+
+         .footer-grid>div:first-child {
+            grid-column: span 2
+         }
+
+         .footer p {
+            margin-top: 17px;
+            font-size: 15px
+         }
+
+         .footer-links {
+            font-size: 14px;
+            gap: 10px
+         }
+
+         .footer-bottom {
+            margin-top: 45px;
+            flex-wrap: wrap;
+            font-size: 10px
+         }
+
+         .modal-inner {
+            padding: 35px 25px
+         }
+
+         .modal h2 {
+            font-size: 30px
+         }
+
+         .modal p {
+            font-size: 15px
+         }
+      }
+
+      @media(prefers-reduced-motion:reduce) {
+         html {
+            scroll-behavior: auto
+         }
+
+         *,
+         *:before,
+         *:after {
+            animation: none !important;
+            transition: none !important
+         }
+
+         .reveal {
+            opacity: 1 !important;
+            filter: none !important;
+            transform: none !important
+         }
+      }
+
+      /* Typography & finish: expressive display, quiet supporting type. */
+      :root {
+         --display: 'Bricolage Grotesque', Helvetica, Arial, sans-serif;
+         --body: Helvetica, 'Helvetica Neue', Arial, sans-serif;
+         --ink: #17171b;
+         --muted: #737177;
+         --pale: #f5f4f2;
+         --line: #e6e3df
+      }
+
+      body {
+         font-family: var(--body);
+         text-rendering: optimizeLegibility
+      }
+
+      h1,
+      h2,
+      .manifesto,
+      .big-number,
+      .project h3,
+      .service-copy h3,
+      .principle h3,
+      .journal-card h3,
+      .mock-inner h4,
+      .phone-body h4 {
+         font-family: var(--display);
+         font-optical-sizing: auto;
+         font-weight: 550;
+         letter-spacing: -.045em
+      }
+
+      h3,
+      .milestone-card h3,
+      .modal h3 {
+         font-family: var(--body);
+         font-weight: 500;
+         letter-spacing: -.02em
+      }
+
+      .brand {
+         font-family: var(--display);
+         font-weight: 700;
+         letter-spacing: -.06em;
+         font-size: 22px
+      }
+
+      .brand-icon {
+         flex-shrink: 0
+      }
+
+      .hero h1 {
+         font-size: clamp(54px, 6.15vw, 108px);
+         line-height: .99;
+         letter-spacing: -.055em;
+         max-width: 1320px;
+         margin-top: 32px;
+         margin-bottom: 30px;
+         text-wrap: balance
+      }
+
+      .hero p {
+         line-height: 1.65;
+         max-width: 630px;
+         font-weight: 400
+      }
+
+      .hero-label {
+         font-size: 12px;
+         letter-spacing: .015em;
+         padding: 11px 17px;
+         background: #ffffff16;
+         border-color: #ffffff24
+      }
+
+      .hero {
+         background: radial-gradient(ellipse at 50% -15%, #ff8139 0%, #ff580a 56%, #dc3d00 100%)
+      }
+
+      .hero-actions {
+         margin-top: 30px
+      }
+
+      .hero .fan {
+         margin-top: 70px
+      }
+
+      .hero .btn {
+         min-height: 49px
+      }
+
+      .hero .btn.white {
+         box-shadow: 0 3px 0 #a8370014, 0 9px 25px #9f30000d
+      }
+
+      .hero .btn.ghost {
+         background: #d4370012
+      }
+
+      .hero .btn.ghost:hover {
+         background: #ffffff15
+      }
+
+      .section-title {
+         line-height: 1.04;
+         text-wrap: balance
+      }
+
+      .section-head p {
+         font-size: 17px;
+         line-height: 1.65
+      }
+
+      .section-kicker {
+         display: flex;
+         align-items: center;
+         gap: 9px;
+         font-family: var(--body);
+         font-size: 11px;
+         font-weight: 500;
+         letter-spacing: .09em;
+         text-transform: uppercase;
+         margin-bottom: 20px;
+         color: #767279
+      }
+
+      .section-kicker .lucide {
+         width: 15px;
+         height: 15px
+      }
+
+      .services .section-kicker {
+         color: #ffebdf
+      }
+
+      .manifesto {
+         line-height: 1.2;
+         font-size: clamp(37px, 4.8vw, 74px);
+         letter-spacing: -.04em
+      }
+
+      .inline-image {
+         width: 1.8em;
+         height: .88em;
+         vertical-align: -.06em;
+         border: 1px solid #f0efed
+      }
+
+      .about-bottom p {
+         font-size: 20px;
+         line-height: 1.65
+      }
+
+      .about-bottom .intro {
+         font-size: 16px;
+         line-height: 1.65
+      }
+
+      .studio-mark strong {
+         font-size: 14px;
+         font-weight: 500
+      }
+
+      .studio-image {
+         box-shadow: 0 15px 50px #17171b06
+      }
+
+      .image-note {
+         box-shadow: 0 4px 15px #00000007;
+         font-size: 12px
+      }
+
+      .nav {
+         padding: 7px 7px 7px 19px;
+         background: #fffffff2;
+         box-shadow: 0 5px 30px #77270006;
+         border-color: #ffffffa8;
+         gap: 30px
+      }
+
+      .nav.scrolled {
+         border-color: #e6e3dfb3;
+         box-shadow: 0 8px 35px #2422220c
+      }
+
+      .nav-links {
+         gap: 25px;
+         font-size: 13px
+      }
+
+      .nav-links a {
+         position: relative;
+         padding: 12px 0;
+         font-weight: 500
+      }
+
+      .nav-links a:after {
+         content: '';
+         position: absolute;
+         bottom: 5px;
+         left: 0;
+         right: 0;
+         height: 2px;
+         border-radius: 2px;
+         background: var(--orange);
+         transform: scaleX(0);
+         transform-origin: left;
+         transition: transform .25s
+      }
+
+      .nav-links a:hover:after,
+      .nav-links a[aria-current=true]:after {
+         transform: scaleX(1)
+      }
+
+      .nav-links a[aria-current=true] {
+         color: #bd3d00
+      }
+
+      .nav .btn {
+         font-size: 13px
+      }
+
+      .btn {
+         gap: 22px;
+         font-weight: 500;
+         font-size: 14px;
+         transition: transform .3s, box-shadow .3s, background .3s
+      }
+
+      .btn .arrow {
+         width: 36px;
+         height: 36px;
+         flex-shrink: 0
+      }
+
+      .btn .arrow .lucide {
+         height: 18px;
+         width: 18px;
+         stroke-width: 1.8
+      }
+
+      .btn:hover {
+         box-shadow: 0 8px 20px #17171b09;
+         transform: translateY(-2px)
+      }
+
+      .btn:active {
+         transform: translateY(0) scale(.985)
+      }
+
+      .lucide {
+         width: 20px;
+         height: 20px;
+         stroke-width: 1.7;
+         flex-shrink: 0;
+         vertical-align: middle;
+         display: inline-block
+      }
+
+      .fan-caption {
+         font-size: 11px;
+         align-items: center;
+         background: #fffffff2;
+         padding: 10px 12px
+      }
+
+      .fan-caption .lucide {
+         height: 14px;
+         width: 14px
+      }
+
+      .fan-card {
+         box-shadow: 0 25px 50px #76260018
+      }
+
+      .capabilities {
+         padding: 37px 0;
+         color: #77747a
+      }
+
+      .capabilities strong {
+         display: flex;
+         align-items: center;
+         gap: 12px;
+         font-size: 18px;
+         letter-spacing: -.035em;
+         font-weight: 500
+      }
+
+      .capabilities .lucide {
+         color: #a29da3;
+         width: 23px;
+         height: 23px
+      }
+
+      .capabilities small {
+         font-size: 10px;
+         letter-spacing: .08em
+      }
+
+      .project {
+         border: 1px solid #00000003;
+         box-shadow: 0 -8px 30px #17171b04
+      }
+
+      .project-copy {
+         padding: 24px 28px
+      }
+
+      .project-meta {
+         font-size: 12px;
+         letter-spacing: .01em;
+         align-items: center
+      }
+
+      .project-meta>span:last-child {
+         border: 1px solid #17171b22;
+         padding: 5px 10px;
+         border-radius: 99px;
+         font-size: 10px
+      }
+
+      .project h3 {
+         line-height: 1.05
+      }
+
+      .project p {
+         font-size: 18px;
+         line-height: 1.6;
+         max-width: 390px
+      }
+
+      .project .tags span {
+         font-size: 11px;
+         background: #ffffff1c
+      }
+
+      .mock-inner h4 {
+         font-weight: 550
+      }
+
+      .phone-head .lucide {
+         width: 12px;
+         height: 12px
+      }
+
+      .phone-head>span {
+         display: flex;
+         gap: 4px
+      }
+
+      .flow-node {
+         box-shadow: 0 3px 8px #17171b03;
+         font-size: 10px
+      }
+
+      .flow-node b {
+         display: grid;
+         place-items: center
+      }
+
+      .flow-node b .lucide {
+         height: 15px;
+         width: 15px
+      }
+
+      .services-panel {
+         padding: 48px;
+         background: radial-gradient(at 90% 0%, #ff803c, var(--orange) 65%, #e34400)
+      }
+
+      .service-copy h3 {
+         line-height: 1.12;
+         letter-spacing: -.035em
+      }
+
+      .service-copy ul {
+         margin: 28px 0 30px
+      }
+
+      .service-copy li {
+         display: flex;
+         align-items: center;
+         gap: 12px;
+         font-size: 16px;
+         line-height: 1.4
+      }
+
+      .service-copy li:before {
+         display: none
+      }
+
+      .service-copy li .lucide {
+         color: #ffe8db;
+         width: 17px;
+         height: 17px
+      }
+
+      .service-foot {
+         line-height: 1.65;
+         max-width: 490px;
+         font-size: 12px
+      }
+
+      .tab {
+         font-size: 13px;
+         font-weight: 400;
+         padding: 13px 18px;
+         transition: background .25s, border-color .25s, box-shadow .25s
+      }
+
+      .tab:not([aria-selected=true]):hover {
+         background: #ffffff15;
+         border-color: #ffffff80
+      }
+
+      .tab[aria-selected=true] {
+         box-shadow: 0 3px 8px #bd30000c
+      }
+
+      .service-image {
+         border: 1px solid #ffffff20
+      }
+
+      .big-number {
+         font-weight: 500;
+         letter-spacing: -.065em
+      }
+
+      .process-aside p {
+         font-size: 12px
+      }
+
+      .timeline {
+         padding: 30px 23px;
+         min-height: 380px
+      }
+
+      .milestone-card {
+         padding: 18px 15px;
+         min-height: 130px;
+         box-shadow: 0 3px 12px #17171b02;
+         transition: transform .3s, box-shadow .3s
+      }
+
+      .milestone-card:hover {
+         transform: translateY(-3px);
+         box-shadow: 0 8px 20px #17171b07
+      }
+
+      .milestone-card>span {
+         display: flex;
+         gap: 6px;
+         align-items: center;
+         font-size: 10px
+      }
+
+      .milestone-card>span .lucide {
+         width: 14px;
+         height: 14px
+      }
+
+      .milestone-card h3 {
+         font-size: 15px;
+         line-height: 1.35;
+         letter-spacing: -.02em;
+         font-weight: 500
+      }
+
+      .milestone-card small {
+         font-size: 10px;
+         line-height: 1.5;
+         display: block
+      }
+
+      .principle {
+         padding: 32px 36px;
+         border: 1px solid #efede9;
+         transition: background .3s
+      }
+
+      .principle:hover {
+         background: #efede9
+      }
+
+      .principle-top {
+         display: flex;
+         justify-content: space-between;
+         gap: 18px;
+         align-items: center
+      }
+
+      .principle .eyebrow {
+         font-size: 10px;
+         letter-spacing: .09em;
+         font-weight: 500
+      }
+
+      .principle-icon {
+         background: white;
+         border: 1px solid #eae6e0;
+         border-radius: 13px;
+         padding: 10px;
+         display: grid;
+         place-items: center;
+         color: #cf4305
+      }
+
+      .principle-icon .lucide {
+         width: 20px;
+         height: 20px
+      }
+
+      .principle h3 {
+         font-weight: 500;
+         line-height: 1.14;
+         margin: 24px 0 18px;
+         letter-spacing: -.035em
+      }
+
+      .principle p {
+         font-size: 15px;
+         line-height: 1.7
+      }
+
+      .accordion summary {
+         padding: 25px 42px 25px 0;
+         font-size: 19px;
+         font-weight: 400;
+         line-height: 1.35
+      }
+
+      .accordion summary:after {
+         display: none
+      }
+
+      .faq-icon {
+         position: absolute;
+         top: 25px;
+         right: 1px;
+         height: 19px;
+         width: 19px;
+         transition: transform .25s, color .25s
+      }
+
+      .accordion details[open] .faq-icon {
+         transform: rotate(45deg);
+         color: #c74308
+      }
+
+      .accordion details[open] summary {
+         color: #bd3c03
+      }
+
+      .accordion details p {
+         font-size: 16px;
+         line-height: 1.75
+      }
+
+      .faq-intro p {
+         font-size: 16px;
+         line-height: 1.7
+      }
+
+      .journal-card h3 {
+         font-weight: 500;
+         font-size: 29px;
+         line-height: 1.13;
+         letter-spacing: -.035em;
+         padding-right: 12px
+      }
+
+      .journal-arrow {
+         width: 21px;
+         height: 21px;
+         margin-left: 2px;
+         transition: transform .3s;
+         color: #adabae
+      }
+
+      .journal-card:hover .journal-arrow {
+         transform: translate(3px, -3px);
+         color: var(--orange)
+      }
+
+      .journal-image {
+         border: 1px solid #17171b05
+      }
+
+      .journal-meta {
+         font-size: 11px;
+         align-items: center;
+         gap: 12px
+      }
+
+      .journal-meta>span+span:before {
+         content: '·';
+         margin-right: 12px;
+         color: #c3bec4
+      }
+
+      .contact h2 {
+         font-weight: 550;
+         letter-spacing: -.055em;
+         line-height: .98
+      }
+
+      .contact-intro>p {
+         font-size: 19px;
+         line-height: 1.65;
+         max-width: 440px
+      }
+
+      .contact-info small {
+         display: flex;
+         gap: 7px;
+         align-items: center;
+         font-size: 11px;
+         letter-spacing: .02em
+      }
+
+      .contact-info small .lucide {
+         height: 13px;
+         width: 13px
+      }
+
+      .contact-info p {
+         font-family: var(--display);
+         font-weight: 500;
+         font-size: 28px;
+         letter-spacing: -.035em
+      }
+
+      .contact-info p .lucide {
+         width: 23px;
+         height: 23px
+      }
+
+      .form {
+         padding: 34px;
+         border: 1px solid #ffffffc4;
+         box-shadow: 0 20px 70px #ae300017
+      }
+
+      .field label,
+      .form legend {
+         font-size: 12px;
+         font-weight: 500
+      }
+
+      .field input,
+      .field textarea {
+         background: #f7f6f4;
+         border-color: #e8e4df;
+         font-size: 14px;
+         padding: 16px;
+         border-radius: 12px
+      }
+
+      .field input:hover,
+      .field textarea:hover {
+         border-color: #cbc6c0
+      }
+
+      .field input:focus,
+      .field textarea:focus {
+         background: white
+      }
+
+      .budget-options label {
+         font-size: 12px;
+         padding: 10px 12px;
+         transition: background .2s, border-color .2s
+      }
+
+      .budget-options label:hover {
+         background: #faf8f6
+      }
+
+      .form .btn {
+         margin-top: 3px;
+         min-height: 49px
+      }
+
+      .form .btn:disabled {
+         opacity: .65;
+         cursor: wait
+      }
+
+      .form-note {
+         font-size: 10px;
+         line-height: 1.6
+      }
+
+      .footer h3 {
+         font-size: 11px;
+         letter-spacing: .02em;
+         font-family: var(--body)
+      }
+
+      .footer p {
+         font-size: 15px;
+         line-height: 1.7
+      }
+
+      .footer-links {
+         font-size: 15px;
+         gap: 14px
+      }
+
+      .footer-bottom a {
+         display: flex;
+         align-items: center;
+         gap: 8px
+      }
+
+      .footer-bottom .lucide {
+         width: 14px;
+         height: 14px
+      }
+
+      .modal h2 {
+         font-family: var(--display);
+         font-weight: 550;
+         letter-spacing: -.04em
+      }
+
+      .modal h3 {
+         font-family: var(--body);
+         font-weight: 500;
+         font-size: 19px;
+         letter-spacing: -.02em
+      }
+
+      .modal p {
+         line-height: 1.75;
+         font-size: 16px
+      }
+
+      .modal-close {
+         display: grid;
+         place-items: center;
+         transition: background .2s, transform .2s
+      }
+
+      .modal-close:hover {
+         background: #ffe3d3;
+         transform: rotate(90deg)
+      }
+
+      .modal-close .lucide {
+         width: 17px;
+         height: 17px
+      }
+
+      .menu-toggle {
+         align-items: center;
+         justify-content: center
+      }
+
+      .menu-close-icon {
+         display: none
+      }
+
+      .menu-toggle[aria-expanded=true] .menu-open-icon {
+         display: none
+      }
+
+      .menu-toggle[aria-expanded=true] .menu-close-icon {
+         display: inline-block
+      }
+
+      .menu-toggle .lucide {
+         width: 21px;
+         height: 21px
+      }
+
+      @media(max-width:1100px) {
+         .capabilities {
+            gap: 18px
+         }
+
+         .capabilities strong {
+            font-size: 16px;
+            gap: 8px
+         }
+
+         .capabilities small {
+            font-size: 8px
+         }
+
+         .services-panel {
+            padding: 36px
+         }
+
+         .project-copy {
+            padding: 18px
+         }
+
+         .project p {
+            font-size: 17px
+         }
+
+         .timeline {
+            gap: 9px
+         }
+
+         .milestone-card {
+            padding: 17px 12px
+         }
+
+         .nav {
+            gap: 26px
+         }
+
+         .nav-links {
+            gap: 22px
+         }
+
+         .principle {
+            padding: 30px
+         }
+
+         .journal-card h3 {
+            font-size: 26px
+         }
+      }
+
+      @media(max-width:760px) {
+         .nav {
+            gap: 14px;
+            padding: 9px 13px 9px 16px
+         }
+
+         .nav .brand {
+            font-size: 22px
+         }
+
+         .nav-links a {
+            padding: 4px 0
+         }
+
+         .nav-links a:after {
+            bottom: -3px
+         }
+
+         .menu-toggle {
+            display: flex
+         }
+
+         .hero {
+            padding-top: 120px
+         }
+
+         .hero-label {
+            font-size: 10px;
+            letter-spacing: .01em;
+            padding: 10px 12px
+         }
+
+         .hero h1 {
+            font-size: clamp(46px, 10.9vw, 75px);
+            line-height: 1.01;
+            letter-spacing: -.055em;
+            margin: 27px auto 23px;
+            max-width: 580px
+         }
+
+         .hero p {
+            font-size: 15px;
+            line-height: 1.65;
+            max-width: 370px
+         }
+
+         .hero-actions {
+            gap: 8px;
+            margin-top: 26px
+         }
+
+         .hero .btn {
+            min-height: 46px;
+            font-size: 12px
+         }
+
+         .btn {
+            gap: 14px;
+            font-size: 12px
+         }
+
+         .btn .arrow {
+            width: 32px;
+            height: 32px
+         }
+
+         .btn .arrow .lucide {
+            width: 16px;
+            height: 16px
+         }
+
+         .hero .fan {
+            margin-top: 52px
+         }
+
+         .fan-caption {
+            font-size: 9px;
+            padding: 8px 10px
+         }
+
+         .fan-caption .lucide {
+            height: 12px;
+            width: 12px
+         }
+
+         .capabilities {
+            gap: 19px;
+            padding: 27px 0
+         }
+
+         .capabilities small {
+            font-size: 9px
+         }
+
+         .capabilities strong {
+            font-size: 13px;
+            gap: 7px
+         }
+
+         .capabilities .lucide {
+            width: 18px;
+            height: 18px
+         }
+
+         .manifesto {
+            font-size: clamp(33px, 8.7vw, 45px);
+            line-height: 1.23
+         }
+
+         .section-title {
+            font-size: 44px
+         }
+
+         .section-head p {
+            font-size: 15px;
+            line-height: 1.65
+         }
+
+         .section-kicker {
+            font-size: 9px;
+            margin-bottom: 16px;
+            gap: 7px
+         }
+
+         .section-kicker .lucide {
+            height: 13px;
+            width: 13px
+         }
+
+         .about-bottom p {
+            font-size: 17px
+         }
+
+         .about-bottom .intro {
+            font-size: 15px
+         }
+
+         .project-copy {
+            padding: 15px
+         }
+
+         .project h3 {
+            font-size: 46px
+         }
+
+         .project p {
+            font-size: 16px;
+            max-width: none
+         }
+
+         .project-meta {
+            font-size: 10px
+         }
+
+         .project-meta>span:last-child {
+            font-size: 9px
+         }
+
+         .tags {
+            gap: 6px
+         }
+
+         .project .tags span {
+            font-size: 10px
+         }
+
+         .services-panel {
+            padding: 28px 22px
+         }
+
+         .service-copy h3 {
+            font-size: 34px;
+            line-height: 1.13
+         }
+
+         .service-copy li {
+            font-size: 14px;
+            gap: 10px
+         }
+
+         .service-foot {
+            font-size: 11px
+         }
+
+         .tab {
+            font-size: 12px
+         }
+
+         .timeline {
+            padding: 15px;
+            min-height: 0;
+            gap: 10px
+         }
+
+         .milestone-card {
+            min-height: 145px;
+            padding: 16px 12px
+         }
+
+         .milestone-card h3 {
+            font-size: 15px
+         }
+
+         .milestone-card>span {
+            font-size: 9px;
+            gap: 5px
+         }
+
+         .milestone-card>span .lucide {
+            height: 12px;
+            width: 12px
+         }
+
+         .big-number {
+            font-size: 76px
+         }
+
+         .principle {
+            padding: 26px
+         }
+
+         .principle h3 {
+            font-size: 31px;
+            line-height: 1.16
+         }
+
+         .principle p {
+            font-size: 14px
+         }
+
+         .principle .eyebrow {
+            font-size: 9px
+         }
+
+         .principle-icon {
+            padding: 9px;
+            border-radius: 12px
+         }
+
+         .principle-icon .lucide {
+            width: 18px;
+            height: 18px
+         }
+
+         .accordion summary {
+            font-size: 17px;
+            padding: 23px 33px 23px 0
+         }
+
+         .faq-icon {
+            top: 25px;
+            height: 17px;
+            width: 17px
+         }
+
+         .accordion details p {
+            font-size: 15px
+         }
+
+         .journal-card h3 {
+            font-size: 28px;
+            line-height: 1.16
+         }
+
+         .journal-arrow {
+            height: 19px;
+            width: 19px
+         }
+
+         .contact h2 {
+            font-size: clamp(55px, 13vw, 72px)
+         }
+
+         .contact-intro>p {
+            font-size: 17px
+         }
+
+         .contact-info p {
+            font-size: 26px
+         }
+
+         .form {
+            padding: 25px 22px
+         }
+
+         .form .field input,
+         .form .field textarea {
+            font-size: 16px
+         }
+
+         .budget-options label {
+            font-size: 11px
+         }
+
+         .footer-grid {
+            gap: 30px
+         }
+
+         .footer-links {
+            font-size: 14px
+         }
+
+         .footer p {
+            font-size: 14px
+         }
+
+         .footer-bottom {
+            font-size: 10px
+         }
+
+         .footer-bottom button {
+            font-size: 10px
+         }
+
+         .modal p {
+            font-size: 15px
+         }
+
+         .modal h2 {
+            font-size: 33px
+         }
+      }
+
+      @media(max-width:380px) {
+         .hero h1 {
+            font-size: 43px
+         }
+
+         .hero .btn {
+            font-size: 11px;
+            gap: 8px;
+            padding-left: 13px
+         }
+
+         .capabilities {
+            column-gap: 14px
+         }
+
+         .capabilities strong {
+            font-size: 12px
+         }
+
+         .manifesto {
+            font-size: 32px
+         }
+
+         .services-panel {
+            padding: 26px 18px
+         }
+
+         .tabs {
+            margin-right: -18px;
+            padding-right: 18px
+         }
+
+         .form {
+            padding: 23px 18px
+         }
+
+         .section-title {
+            font-size: 40px
+         }
+      }
+   </style>
 </head>
+
 <body>
-<a class="skip" href="#main">Skip to content</a><div class="progress" aria-hidden="true"></div>
-<header class="nav"><a href="#home" class="brand" aria-label="ubbastudio home"><span class="brand-icon"></span>ubbastudio</a><nav class="nav-links" id="navigation" aria-label="Main navigation"><a href="#work">Work</a><a href="#services">Services</a><a href="#process">Process</a><a href="#journal">Journal</a></nav><a class="btn orange" href="#contact">Start a project <span class="arrow" aria-hidden="true"><i data-lucide="arrow-right" aria-hidden="true"></i></span></a><button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="navigation"><i data-lucide="menu" class="menu-open-icon" aria-hidden="true"></i><i data-lucide="x" class="menu-close-icon" aria-hidden="true"></i></button></header>
-<main id="main">
-<section class="hero" id="home"><div class="hero-label hero-enter"><span class="live-dot"></span>Independent studio · Delhi, India</div><h1 class="hero-enter">Apps and websites that<br> help businesses grow.</h1><p class="hero-enter">A Delhi-based studio building websites, apps and AI automations, from the first idea to launch day.</p><div class="hero-actions hero-enter"><a class="btn white" href="#contact">Start a project <span class="arrow" aria-hidden="true"><i data-lucide="arrow-right" aria-hidden="true"></i></span></a><a class="btn ghost" href="#work">See our work <span class="arrow" aria-hidden="true"><i data-lucide="arrow-right" aria-hidden="true"></i></span></a></div>
-<div class="fan" aria-label="A glimpse of our digital world">
-<a class="fan-card" href="#work"><img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&w=600&q=85" alt="Clean desktop workspace" fetchpriority="high"><span class="fan-caption">Thoughtful websites <i data-lucide="arrow-up-right" aria-hidden="true"></i></span></a>
-<a class="fan-card" href="#work"><img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=600&q=85" alt="Graphic design and creative direction"><span class="fan-caption">Digital experiences <i data-lucide="arrow-up-right" aria-hidden="true"></i></span></a>
-<a class="fan-card" href="#work"><img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=85" alt="Software code on a laptop"><span class="fan-caption">Built with intention <i data-lucide="arrow-up-right" aria-hidden="true"></i></span></a>
-<a class="fan-card" href="#work"><img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=600&q=85" alt="Laptop ready for product development"><span class="fan-caption">Better products <i data-lucide="arrow-up-right" aria-hidden="true"></i></span></a>
-<a class="fan-card" href="#work"><img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=600&q=85" alt="Mobile app on a smartphone"><span class="fan-caption">Apps for everyday <i data-lucide="arrow-up-right" aria-hidden="true"></i></span></a>
-</div></section>
-<div class="wrap capabilities"><small>ONE STUDIO. FROM IDEA TO IMPACT.</small><strong><i data-lucide="panels-top-left" aria-hidden="true"></i>Websites</strong><strong><i data-lucide="smartphone" aria-hidden="true"></i>Applications</strong><strong><i data-lucide="workflow" aria-hidden="true"></i>AI automations</strong><strong><i data-lucide="layers-3" aria-hidden="true"></i>Digital products</strong></div>
-<section class="wrap section about" id="about"><h2 class="manifesto reveal">We’re a Delhi-based studio <span class="inline-image"><img loading="lazy" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=260&q=80" alt="Creative team collaborating"></span> of designers and developers helping founders <span class="inline-image"><img loading="lazy" src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=260&q=80" alt="Laptop"></span> turn big ideas into digital products <span class="inline-image"><img loading="lazy" src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=260&q=80" alt="Design materials"></span> people love to use.</h2><div class="studio-image reveal"><img loading="lazy" src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1800&q=85" alt="Light-filled creative workspace with collaborative desks"><span class="image-note"><i></i>Good ideas deserve a thoughtful build.</span></div><div class="about-bottom reveal"><div><div class="studio-mark"><span class="brand-icon"></span><strong>Small team. Shared ambition.</strong></div><p class="intro">Designers, developers and problem-solvers.<br>Based in Delhi. Built for everywhere.</p></div><div><p>We bring design and engineering to the same table. From a first website to a full software product, we help you make the right decisions, build the right things, and launch with confidence.</p><a href="#process" class="btn">Meet our process <span class="arrow"><i data-lucide="arrow-right" aria-hidden="true"></i></span></a></div></div></section>
-<section class="section wrap work" id="work"><div class="section-head reveal"><div><span class="section-kicker"><i data-lucide="layout-grid" aria-hidden="true"></i>Selected work / 01</span><h2 class="section-title">Selected directions</h2><p class="muted">A few possibilities across web, apps and automation.<br>Concept projects, made to show what’s possible.</p></div><a class="btn" href="#contact">Build something like this <span class="arrow"><i data-lucide="arrow-right" aria-hidden="true"></i></span></a></div><div class="work-stack">
-<article class="project"><div class="project-copy"><div class="project-meta"><span><i data-lucide="compass" aria-hidden="true"></i>01 / Website & product</span><span>Concept</span></div><div><h3>Forma</h3><p>A clear, confident home for a software product. Designed to turn curiosity into a conversation.</p><div class="tags"><span>Web design</span><span>Development</span><span>Product thinking</span></div></div></div><div class="project-image"><img loading="lazy" src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1000&q=80" alt="Modern architectural setting for the Forma concept"><div class="mock-browser" aria-label="Forma website concept"><div class="browser-bar"><i></i><i></i><i></i><small>forma / a concept by ubbastudio</small></div><div class="mock-inner"><div class="mock-nav"><b>forma®</b><span>Product &nbsp; Resources &nbsp; Get started ↗</span></div><h4>Less busywork.<br>More possibility.</h4><p>One calm place for your team to turn plans into progress.</p><span class="mock-button">Meet your new workspace ↗</span><div class="mock-stats"><div><b>01</b>Find your focus</div><div><b>02</b>Make it happen</div><div><b>03</b>Move together</div></div></div></div></div></article>
-<article class="project"><div class="project-copy"><div class="project-meta"><span><i data-lucide="list-checks" aria-hidden="true"></i>02 / Mobile experience</span><span>Concept</span></div><div><h3>Offbeat</h3><p>An app for finding your next great escape. A little less planning, a lot more exploring.</p><div class="tags"><span>App design</span><span>Mobile development</span><span>User experience</span></div></div></div><div class="project-image"><img loading="lazy" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1000&q=85" alt="Mountain landscape behind a travel app concept"><div class="mock-phone"><div class="phone-head"><b>9:41</b><span><i data-lucide="signal" aria-hidden="true"></i><i data-lucide="battery-full" aria-hidden="true"></i></span></div><div class="phone-body"><small>HELLO, EXPLORER</small><h4>Find your<br>kind of away.</h4><img loading="lazy" src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=400&q=80" alt="Forest destination"><p><b>A weekend in the wild ↗</b></p><small>Fresh air. New perspectives. Your next story.</small><div class="mock-button" style="background:#ff580a;color:white;text-align:center;border-radius:14px;padding:12px;margin-top:18px;font-size:10px">Explore destinations</div></div></div></div></article>
-<article class="project"><div class="project-copy"><div class="project-meta"><span><i data-lucide="pen-tool" aria-hidden="true"></i>03 / AI & operations</span><span>Concept</span></div><div><h3>On autopilot.</h3><p>A smarter route from enquiry to follow-up. Connected tools, useful AI, and people in control.</p><div class="tags"><span>AI automation</span><span>Integrations</span><span>Internal tools</span></div></div></div><div class="project-image"><img loading="lazy" src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&w=1000&q=80" alt="Workspace for an automated enquiry flow"><div class="automation-ui"><h4>A little less manual.</h4><p>Enquiry → understanding → action.</p><div class="flow-node"><b><i data-lucide="inbox" aria-hidden="true"></i></b> New enquiry received</div><div class="flow-line"></div><div class="flow-node"><b><i data-lucide="sparkles" aria-hidden="true"></i></b> AI organises the details</div><div class="flow-line"></div><div class="flow-node"><b><i data-lucide="circle-check" aria-hidden="true"></i></b> Your team reviews & replies</div></div></div></article>
-</div></section>
-<section class="wrap services" id="services"><div class="services-panel"><div class="section-head reveal"><div><span class="section-kicker"><i data-lucide="shapes" aria-hidden="true"></i>Our expertise / 02</span><h2 class="section-title">What we do</h2><p>Five ways to move your business forward.<br>One team, from the first conversation to the next release.</p></div><a href="#contact" class="btn white">Start a project <span class="arrow"><i data-lucide="arrow-right" aria-hidden="true"></i></span></a></div><div class="tabs" role="tablist" aria-label="Our services"><button class="tab" id="tab-0" role="tab" aria-selected="true" aria-controls="service-panel" data-service="0">Website development</button><button class="tab" id="tab-1" role="tab" aria-selected="false" aria-controls="service-panel" tabindex="-1" data-service="1">App development</button><button class="tab" id="tab-2" role="tab" aria-selected="false" aria-controls="service-panel" tabindex="-1" data-service="2">AI automations</button><button class="tab" id="tab-3" role="tab" aria-selected="false" aria-controls="service-panel" tabindex="-1" data-service="3">Product development</button><button class="tab" id="tab-4" role="tab" aria-selected="false" aria-controls="service-panel" tabindex="-1" data-service="4">Ongoing support</button></div><div class="service-content" id="service-panel" role="tabpanel" aria-labelledby="tab-0"><div class="service-copy"><h3 id="service-title">Websites that look the part. And work even harder.</h3><ul id="service-list"><li><i data-lucide="check" aria-hidden="true"></i>Strategy and thoughtful UI/UX</li><li><i data-lucide="check" aria-hidden="true"></i>Responsive, custom development</li><li><i data-lucide="check" aria-hidden="true"></i>Performance and technical SEO</li><li><i data-lucide="check" aria-hidden="true"></i>CMS and third-party integrations</li></ul><p class="service-foot" id="service-foot">From your first landing page to your next big chapter.</p></div><div class="service-image"><img id="service-img" loading="lazy" src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&w=1000&q=85" alt="Website development workspace"></div></div></div></section>
-<section class="section process" id="process"><div class="wrap"><div class="section-head reveal"><div><span class="section-kicker"><i data-lucide="route" aria-hidden="true"></i>The process / 03</span><h2 class="section-title">Clear steps. Better launches.</h2><p class="muted">You’re part of every milestone. We agree the scope and timeline before the first line of code.</p></div><div class="process-aside"><div class="big-number">6 steps</div><p class="muted">From a first conversation to what comes next.</p></div></div><div class="timeline reveal"><div class="milestone"><div class="milestone-card"><span><i data-lucide="compass" aria-hidden="true"></i>01 / Discover</span><h3>Understand the problem</h3><small>Goals, audience & possibilities</small></div><i class="timeline-dot"></i></div><div class="milestone"><div class="milestone-card"><span><i data-lucide="list-checks" aria-hidden="true"></i>02 / Define</span><h3>Agree the right scope</h3><small>Roadmap & milestones</small></div><i class="timeline-dot"></i></div><div class="milestone"><div class="milestone-card"><span><i data-lucide="pen-tool" aria-hidden="true"></i>03 / Design</span><h3>Make the idea tangible</h3><small>Flows, UI & prototype</small></div><i class="timeline-dot"></i></div><div class="milestone"><div class="milestone-card"><span><i data-lucide="code-2" aria-hidden="true"></i>04 / Develop</span><h3>Build, share, refine</h3><small>Working software & reviews</small></div><i class="timeline-dot"></i></div><div class="milestone"><div class="milestone-card"><span><i data-lucide="scan-check" aria-hidden="true"></i>05 / Test</span><h3>Check every detail</h3><small>Devices, flows & performance</small></div><i class="timeline-dot"></i></div><div class="milestone"><div class="milestone-card"><span><i data-lucide="rocket" aria-hidden="true"></i>06 / Launch</span><h3>Ready for the real world</h3><small>Handover & next steps</small></div><i class="timeline-dot"></i></div></div></div></section>
-<section class="section wrap" id="approach"><div class="section-head reveal"><h2 class="section-title">A good way to work.</h2><p class="muted">No mystery in the middle.<br>Just thoughtful people building useful things.</p></div><div class="principles-grid"><article class="principle reveal"><div class="principle-top"><span class="eyebrow">01 / Built together</span><span class="principle-icon"><i data-lucide="handshake" aria-hidden="true"></i></span></div><h3>You bring the ambition.<br>We bring design and engineering.</h3><p>We work through the important questions with you, so the finished product makes sense for your business and the people using it.</p></article><article class="principle reveal"><div class="principle-top"><span class="eyebrow">02 / Open by default</span><span class="principle-icon"><i data-lucide="messages-square" aria-hidden="true"></i></span></div><h3>Clear scope.<br>Honest conversations.</h3><p>Regular reviews keep decisions visible and progress easy to follow.</p></article><article class="principle reveal"><div class="principle-top"><span class="eyebrow">03 / Purposeful technology</span><span class="principle-icon"><i data-lucide="blocks" aria-hidden="true"></i></span></div><h3>The right tool.<br>For the right reason.</h3><p>We choose technology around your needs, your team, and your next stage of growth.</p></article><article class="principle reveal"><div class="principle-top"><span class="eyebrow">04 / Built to keep going</span><span class="principle-icon"><i data-lucide="move-up-right" aria-hidden="true"></i></span></div><h3>A launch is a beginning.<br>Let’s make it a good one.</h3><p>Thoughtful handover, maintainable code, and a clear plan for whatever comes next.</p></article></div></section>
-<section class="section wrap faq" id="faq"><div class="faq-intro reveal"><h2 class="section-title">Questions,<br>answered</h2><p class="muted">Every project starts with a conversation. Here are a few things you might be wondering.</p><a class="btn" href="#contact">Ask the studio <span class="arrow"><i data-lucide="arrow-right" aria-hidden="true"></i></span></a></div><div class="accordion reveal"><details open><summary>How long does a project take?<i data-lucide="plus" class="faq-icon" aria-hidden="true"></i></summary><p>It depends on the scope. A focused website, a mobile app and a custom software platform need different timelines. We map out the milestones with you after discovery, before development begins.</p></details><details><summary>How much does a project cost?<i data-lucide="plus" class="faq-icon" aria-hidden="true"></i></summary><p>We quote around your requirements, integrations and timeline. Tell us what you have in mind and your budget range, and we’ll help define a practical scope.</p></details><details><summary>Do you work with teams outside Delhi?<i data-lucide="plus" class="faq-icon" aria-hidden="true"></i></summary><p>Yes. We’re based in Delhi and collaborate remotely. Calls, shared documents and regular reviews keep everyone aligned, wherever your team works.</p></details><details><summary>Can you build an MVP from an idea?<i data-lucide="plus" class="faq-icon" aria-hidden="true"></i></summary><p>Yes. We can help shape the core features, design the experience and build the first version, with a roadmap for what to develop after you learn from real users.</p></details><details><summary>What can you automate with AI?<i data-lucide="plus" class="faq-icon" aria-hidden="true"></i></summary><p>We can explore workflows such as organising incoming enquiries, document processing, internal search and connecting business tools. We define the data access and human review needed for each use case.</p></details><details><summary>Can you support us after launch?<i data-lucide="plus" class="faq-icon" aria-hidden="true"></i></summary><p>We can scope ongoing maintenance, improvements and new features alongside your project. Support responsibilities and response expectations are agreed before launch.</p></details></div></section>
-<section class="section wrap journal" id="journal"><div class="section-head reveal"><h2 class="section-title">From the journal</h2><p class="muted">A few notes on process, products and the craft of building better software.</p></div><div class="journal-grid"><button class="journal-card reveal" data-article="0"><div class="journal-image"><img loading="lazy" src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=800&q=85" alt="Planning user interfaces and wireframes"></div><div class="journal-meta"><span>Process</span><span>Studio note · 2 min read</span></div><h3>Plan the product before writing the first line of code <i data-lucide="arrow-up-right" class="journal-arrow" aria-hidden="true"></i></h3></button><button class="journal-card reveal" data-article="1"><div class="journal-image"><img loading="lazy" src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=800&q=85" alt="Colourful design work and visual exploration"></div><div class="journal-meta"><span>Product</span><span>Studio note · 2 min read</span></div><h3>What your first version actually needs to do <i data-lucide="arrow-up-right" class="journal-arrow" aria-hidden="true"></i></h3></button><button class="journal-card reveal" data-article="2"><div class="journal-image"><img loading="lazy" src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=85" alt="Team reviewing business workflows"></div><div class="journal-meta"><span>Automation</span><span>Studio note · 2 min read</span></div><h3>Start with the busywork. Then think about AI. <i data-lucide="arrow-up-right" class="journal-arrow" aria-hidden="true"></i></h3></button></div></section>
-<section class="contact" id="contact"><div class="wrap"><div class="contact-grid"><div class="contact-intro reveal"><h2>Tell us about<br>your project.</h2><p>A new idea, a better website, or a workflow that needs a rethink. We’d love to hear what you’re building.</p><div class="contact-info"><small><i data-lucide="map-pin" aria-hidden="true"></i>Based in</small><p>Delhi, India.</p></div><div class="contact-info"><small><i data-lucide="globe-2" aria-hidden="true"></i>Working with</small><p>Ambitious people, everywhere.</p></div><div class="contact-info"><small><i data-lucide="orbit" aria-hidden="true"></i>From first idea to next release</small><p>Let’s make it happen. <i data-lucide="arrow-up-right" aria-hidden="true"></i></p></div></div><form class="form" id="project-form"><div class="form-row"><div class="field"><label for="name">Name</label><input id="name" name="name" placeholder="Your name" autocomplete="name" required maxlength="120"></div><div class="field"><label for="email">Email</label><input id="email" name="email" type="email" placeholder="you@company.com" autocomplete="email" required maxlength="200"></div></div><div class="field"><label for="company">Company</label><input id="company" name="company" placeholder="Optional" autocomplete="organization" maxlength="200"></div><fieldset><legend>Budget</legend><div class="budget-options"><label><input type="radio" name="budget" value="Under ₹1 lakh"> Under ₹1L</label><label><input type="radio" name="budget" value="₹1–3 lakh"> ₹1L–3L</label><label><input type="radio" name="budget" value="₹3–5 lakh"> ₹3L–5L</label><label><input type="radio" name="budget" value="₹5 lakh+"> ₹5L+</label><label><input type="radio" name="budget" value="Let’s discuss" checked> Let’s discuss</label></div></fieldset><div class="field"><label for="project">About your project</label><textarea id="project" name="project" placeholder="What are you building, and when do you need it?" required maxlength="5000"></textarea></div><button class="btn orange" type="submit"><span id="submit-label">Download project brief</span> <span class="arrow" aria-hidden="true"><i data-lucide="arrow-down-to-line" aria-hidden="true"></i></span></button><p class="form-note" id="form-note">Your brief downloads as a text file. Nothing is sent or stored on a server.</p><p class="form-status" id="form-status" role="status"></p></form></div><footer class="footer"><div class="footer-grid"><div><a class="brand" href="#home"><span class="brand-icon"></span>ubbastudio</a><p>An independent software development studio turning ambitious ideas into websites, apps and useful automations.</p></div><div><h3>Explore</h3><div class="footer-links"><a href="#about">The studio</a><a href="#work">Work</a><a href="#services">Services</a><a href="#process">Process</a></div></div><div><h3>Start a conversation</h3><div class="footer-links"><a href="#contact">Your project</a><a href="#faq">Questions</a><a href="#journal">Journal</a></div></div><div><h3>Studio</h3><div class="footer-links"><span>Delhi, India</span><span>Design. Develop. Automate.</span><span>Made with intention.</span></div></div></div><div class="footer-bottom"><span>© <span id="year">2026</span> ubbastudio. All rights reserved.</span><button id="privacy-button">Privacy & this website</button><a href="#home">Back to top <i data-lucide="arrow-up" aria-hidden="true"></i></a></div></footer></div></section>
-</main>
-<dialog class="modal" id="article-modal" data-lenis-prevent><button class="modal-close" aria-label="Close article"><i data-lucide="x" aria-hidden="true"></i></button><div class="modal-inner" id="article-content"></div></dialog>
-<script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
-<script src="https://unpkg.com/lenis@1.3.27/dist/lenis.min.js"></script>
-<script>
-/* SETUP: Add your real form submission URL below to enable delivery.
-   The page ships in download mode because no inbox or backend was supplied.
-   An endpoint must accept POST JSON { name, email, company, budget, project }.
-   Unsplash images and CDN libraries require an internet connection. */
-const STUDIO_CONFIG={formEndpoint:''};
-function refreshIcons(){if(window.lucide)lucide.createIcons({attrs:{'stroke-width':1.7,'aria-hidden':'true'}})}
-refreshIcons();
-const reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-let lenis;if(window.Lenis&&!reducedMotion){lenis=new Lenis({duration:1.15,smoothWheel:true,anchors:{offset:-100}});function raf(t){lenis.raf(t);requestAnimationFrame(raf)}requestAnimationFrame(raf)}
-const nav=document.querySelector('.nav'), menu=document.querySelector('.menu-toggle'), links=document.querySelector('.nav-links');
-menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));menu.setAttribute('aria-label',open?'Close menu':'Open menu');links.classList.toggle('open',open)});
-function closeMenu(){menu.setAttribute('aria-expanded','false');menu.setAttribute('aria-label','Open menu');links.classList.remove('open')}
-links.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu()});
-let scrollPending=false;addEventListener('scroll',()=>{if(!scrollPending){requestAnimationFrame(()=>{nav.classList.toggle('scrolled',scrollY>60);document.querySelector('.progress').style.transform=`scaleX(${scrollY/(document.documentElement.scrollHeight-innerHeight)||0})`;scrollPending=false});scrollPending=true}},{passive:true});
-const services=[
-{title:'Websites that look the part. And work even harder.',list:['Strategy and thoughtful UI/UX','Responsive, custom development','Performance and technical SEO','CMS and third-party integrations'],foot:'From your first landing page to your next big chapter.',photo:'photo-1499951360447-b19be8fe80f5',alt:'Website development workspace'},
-{title:'From a bright idea to an app people reach for.',list:['User journeys and interactive prototypes','Mobile and web app development','APIs, authentication and integrations','Testing, release and iteration'],foot:'Useful experiences, made for real people.',photo:'photo-1512941937669-90a1b58e7e9c',alt:'Mobile application on a smartphone'},
-{title:'Less repetitive work. More room for what matters.',list:['Workflow discovery and mapping','AI-assisted document and data processing','CRM and business tool integrations','Human review and clear controls'],foot:'Practical automation, built around your business.',photo:'photo-1454165804606-c3d57bc86b40',alt:'Reviewing business processes for automation'},
-{title:'Your next big idea, built from the inside out.',list:['Discovery, scope and product strategy','MVP design and full-stack development','Dashboards, platforms and internal tools','A roadmap for your next release'],foot:'From a first prototype to a product you can grow.',photo:'photo-1555066931-4365d14bab8c',alt:'Software product code on a laptop'},
-{title:'Launch day is only the beginning.',list:['Ongoing maintenance and improvements','New features and integrations','Performance reviews and fixes','Documentation and technical handover'],foot:'Keep moving, with a team that knows your product.',photo:'photo-1522071820081-009f0129c71c',alt:'Team collaborating on software improvements'}];
-const tabs=[...document.querySelectorAll('.tab')];function chooseService(index,focus=false){tabs.forEach((t,i)=>{t.setAttribute('aria-selected',String(i===index));t.tabIndex=i===index?0:-1});if(focus)tabs[index].focus();const s=services[index];document.getElementById('service-panel').setAttribute('aria-labelledby','tab-'+index);document.getElementById('service-title').textContent=s.title;document.getElementById('service-list').replaceChildren(...s.list.map(x=>{const li=document.createElement('li');li.innerHTML='<i data-lucide="check" aria-hidden="true"></i>';li.append(document.createTextNode(x));return li}));document.getElementById('service-foot').textContent=s.foot;const img=document.getElementById('service-img');img.src=`https://images.unsplash.com/${s.photo}?auto=format&fit=crop&w=1000&q=85`;img.alt=s.alt;refreshIcons();if(!reducedMotion)document.getElementById('service-panel').animate([{opacity:.4,transform:'translateY(10px)',filter:'blur(4px)'},{opacity:1,transform:'translateY(0)',filter:'blur(0)'}],{duration:430,easing:'ease-out'})}
-tabs.forEach((t,i)=>{t.addEventListener('click',()=>chooseService(i));t.addEventListener('keydown',e=>{let next;if(e.key==='ArrowRight')next=(i+1)%tabs.length;if(e.key==='ArrowLeft')next=(i+tabs.length-1)%tabs.length;if(e.key==='Home')next=0;if(e.key==='End')next=tabs.length-1;if(next!==undefined){e.preventDefault();chooseService(next,true)}})});
-document.querySelectorAll('.accordion details').forEach(el=>el.addEventListener('toggle',()=>{if(el.open)document.querySelectorAll('.accordion details').forEach(other=>{if(other!==el)other.open=false})}));
-const articles=[
-{category:'Process',title:'Plan the product before writing the first line of code',body:'<p>A good brief starts with the change you want to make. Who is the product for? What are they trying to do? What is getting in their way today?</p><h3>Start with the journey</h3><p>Write down the shortest useful path from someone arriving to completing their task. For a website, that might be understanding your service and making an enquiry. For an app, it could be creating an account and completing one essential action.</p><h3>Agree what success looks like</h3><p>Pick a small set of outcomes you can observe. Make sure the team agrees which features are essential for those outcomes and which can wait. A focused scope makes trade-offs easier throughout the build.</p><h3>Make decisions visible</h3><p>Use simple wireframes, a written feature list and a shared milestone plan. Review the risky assumptions first. The aim is to create enough clarity to build confidently, while leaving room to learn.</p>'},
-{category:'Product',title:'What your first version actually needs to do',body:'<p>Your first version does not need to contain every idea on the roadmap. It needs to help a specific person solve a specific problem, from beginning to end.</p><h3>Choose one complete experience</h3><p>Focus on one useful workflow. A small experience that works all the way through is easier to understand and evaluate than several features that stop halfway.</p><h3>Keep the fundamentals</h3><p>A smaller scope still needs clear navigation, sensible error messages, accessibility and appropriate data protection. These are part of the experience, not decorative extras.</p><h3>Leave space to learn</h3><p>Plan how you will collect feedback and decide what to build next. Speak with people who use the product, watch where they get stuck and distinguish repeated problems from one-off requests.</p><p>The first release is a way to begin a useful conversation with your users.</p>'},
-{category:'Automation',title:'Start with the busywork. Then think about AI.',body:'<p>The best place to start an automation project is a repeated task that someone already understands. Map what happens, which tools are involved and where the work gets stuck.</p><h3>Make the workflow explicit</h3><p>Describe the trigger, the information needed and the expected result. Straightforward rules may be enough. AI becomes useful when a task involves unstructured information, such as extracting details from an enquiry or suggesting a category.</p><h3>Decide where people stay involved</h3><p>Choose what can happen automatically and what needs review. Give the team a way to inspect results, handle exceptions and recover when a step fails.</p><h3>Start small and measure</h3><p>Try one bounded workflow with representative examples before expanding it. Compare the time saved with the effort needed to review results and maintain the integration.</p><p>The goal is dependable assistance that makes the working day easier.</p>'}];
-const modal=document.getElementById('article-modal');let previousFocus;function openModal(html){previousFocus=document.activeElement;document.getElementById('article-content').innerHTML=html;modal.showModal();lenis?.stop()}document.querySelectorAll('[data-article]').forEach(btn=>btn.addEventListener('click',()=>{const a=articles[Number(btn.dataset.article)];openModal(`<span class="eyebrow">${a.category} / Studio note</span><h2>${a.title}</h2>${a.body}`)}));document.querySelector('.modal-close').addEventListener('click',()=>modal.close());modal.addEventListener('click',e=>{if(e.target===modal){const r=modal.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)modal.close()}});modal.addEventListener('close',()=>{lenis?.start();previousFocus?.focus()});document.getElementById('privacy-button').addEventListener('click',()=>openModal('<span class="eyebrow">Privacy</span><h2>A small note on this website.</h2><p>This version does not use analytics or store your project details on a server. The project form generates a text file on your device.</p><p>Fonts, photographs and animation libraries load from external providers: Google Fonts, Unsplash, jsDelivr and unpkg. Your browser makes requests to those providers to display the page.</p><p>If a submission endpoint is configured, project details will be sent to that endpoint. The site owner should update this notice before enabling submissions.</p>'));
-const form=document.getElementById('project-form');if(STUDIO_CONFIG.formEndpoint){document.getElementById('submit-label').textContent='Send project enquiry';document.getElementById('form-note').textContent='Your details will be sent to the studio to discuss this project.'}
-form.addEventListener('submit',async e=>{e.preventDefault();if(!form.reportValidity())return;const data=Object.fromEntries(new FormData(form)),status=document.getElementById('form-status'),button=form.querySelector('button[type=submit]');if(!STUDIO_CONFIG.formEndpoint){const brief=`UBBASTUDIO — PROJECT BRIEF\n\nName: ${data.name}\nEmail: ${data.email}\nCompany: ${data.company||'—'}\nBudget: ${data.budget}\n\nABOUT THE PROJECT\n${data.project}\n`;const url=URL.createObjectURL(new Blob([brief],{type:'text/plain;charset=utf-8'})),a=document.createElement('a');a.href=url;a.download='ubbastudio-project-brief.txt';a.click();setTimeout(()=>URL.revokeObjectURL(url),2000);status.textContent='Your brief has been prepared for download. No enquiry has been sent.';return}button.disabled=true;status.textContent='Sending your enquiry…';try{const r=await fetch(STUDIO_CONFIG.formEndpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});if(!r.ok)throw new Error();status.textContent='Your enquiry was submitted successfully.';form.reset()}catch{status.textContent='Your enquiry could not be sent. Please try again. Your details remain in the form.'}finally{button.disabled=false}});
-const activeSections=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){document.querySelectorAll('.nav-links a').forEach(a=>{if(a.getAttribute('href')==='#'+entry.target.id)a.setAttribute('aria-current','true');else a.removeAttribute('aria-current')})}})},{rootMargin:'-15% 0px -60% 0px',threshold:0});['home','about','work','services','process','approach','faq','journal','contact'].forEach(id=>activeSections.observe(document.getElementById(id)));
-document.getElementById('year').textContent=new Date().getFullYear();
-// Images retain a useful background if an external image is unavailable.
-document.querySelectorAll('img').forEach(img=>img.addEventListener('error',()=>{img.style.background='#e7e2dc';img.style.color='#4c4945'},{once:true}));
-</script>
-<script type="module">
-// Motion is the animation library formerly known as Framer Motion.
-// The vanilla API keeps this page editable as one HTML file, without a build step.
-const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-if(!reduce){try{const {animate,inView,stagger}=await import('https://cdn.jsdelivr.net/npm/motion@12.23.24/+esm');animate('.hero-enter',{opacity:[0,1],y:[24,0],filter:['blur(12px)','blur(0px)']},{duration:.9,delay:stagger(.12),ease:[.22,1,.36,1]});animate('.fan',{opacity:[0,1],y:[65,0]},{duration:1.2,delay:.35,ease:[.22,1,.36,1]});document.querySelectorAll('.reveal').forEach(el=>{if(el.getBoundingClientRect().top>innerHeight){el.style.opacity='0';inView(el,()=>{animate(el,{opacity:[0,1],y:[32,0],filter:['blur(9px)','blur(0px)']},{duration:.8,ease:[.22,1,.36,1]});return()=>{}},{margin:'0px 0px -40px 0px'})}});document.documentElement.dataset.motion='ready'}catch(error){document.querySelectorAll('.reveal').forEach(el=>{el.style.opacity='1';el.style.filter='none'});console.info('Animation CDN unavailable; readable static layout retained.')}}
-</script>
+   <a class="skip" href="#main">Skip to content</a>
+   <div class="progress" aria-hidden="true"></div>
+   <header class="nav"><a href="#home" class="brand" aria-label="ubbastudio home"><span
+            class="brand-icon"></span>ubbastudio</a>
+      <nav class="nav-links" id="navigation" aria-label="Main navigation"><a href="#work">Work</a><a
+            href="#services">Services</a><a href="#process">Process</a><a href="#journal">Journal</a></nav><a
+         class="btn orange" href="#contact">Start a project <span class="arrow" aria-hidden="true"><i
+               data-lucide="arrow-right" aria-hidden="true"></i></span></a><button class="menu-toggle"
+         aria-label="Open menu" aria-expanded="false" aria-controls="navigation"><i data-lucide="menu"
+            class="menu-open-icon" aria-hidden="true"></i><i data-lucide="x" class="menu-close-icon"
+            aria-hidden="true"></i></button>
+   </header>
+   <main id="main">
+      <section class="hero" id="home">
+         <div class="hero-label hero-enter"><span class="live-dot"></span>Independent studio · Delhi, India</div>
+         <h1 class="hero-enter">Apps and websites that<br> help businesses grow.</h1>
+         <p class="hero-enter">A Delhi-based studio building websites, apps and AI automations, from the first idea to
+            launch day.</p>
+         <div class="hero-actions hero-enter"><a class="btn white" href="#contact">Start a project <span class="arrow"
+                  aria-hidden="true"><i data-lucide="arrow-right" aria-hidden="true"></i></span></a><a class="btn ghost"
+               href="#work">See our work <span class="arrow" aria-hidden="true"><i data-lucide="arrow-right"
+                     aria-hidden="true"></i></span></a></div>
+         <div class="fan" aria-label="A glimpse of our digital world">
+            <a class="fan-card" href="#work"><img
+                  src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&w=600&q=85"
+                  alt="Clean desktop workspace" fetchpriority="high"><span class="fan-caption">Thoughtful websites <i
+                     data-lucide="arrow-up-right" aria-hidden="true"></i></span></a>
+            <a class="fan-card" href="#work"><img
+                  src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=600&q=85"
+                  alt="Graphic design and creative direction"><span class="fan-caption">Digital experiences <i
+                     data-lucide="arrow-up-right" aria-hidden="true"></i></span></a>
+            <a class="fan-card" href="#work"><img
+                  src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=85"
+                  alt="Software code on a laptop"><span class="fan-caption">Built with intention <i
+                     data-lucide="arrow-up-right" aria-hidden="true"></i></span></a>
+            <a class="fan-card" href="#work"><img
+                  src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=600&q=85"
+                  alt="Laptop ready for product development"><span class="fan-caption">Better products <i
+                     data-lucide="arrow-up-right" aria-hidden="true"></i></span></a>
+            <a class="fan-card" href="#work"><img
+                  src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=600&q=85"
+                  alt="Mobile app on a smartphone"><span class="fan-caption">Apps for everyday <i
+                     data-lucide="arrow-up-right" aria-hidden="true"></i></span></a>
+         </div>
+      </section>
+      <div class="wrap capabilities"><small>ONE STUDIO. FROM IDEA TO IMPACT.</small><strong><i
+               data-lucide="panels-top-left" aria-hidden="true"></i>Websites</strong><strong><i data-lucide="smartphone"
+               aria-hidden="true"></i>Applications</strong><strong><i data-lucide="workflow" aria-hidden="true"></i>AI
+            automations</strong><strong><i data-lucide="layers-3" aria-hidden="true"></i>Digital products</strong></div>
+      <section class="wrap section about" id="about">
+         <h2 class="manifesto reveal">We’re a Delhi-based studio <span class="inline-image"><img loading="lazy"
+                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=260&q=80"
+                  alt="Creative team collaborating"></span> of designers and developers helping founders <span
+               class="inline-image"><img loading="lazy"
+                  src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=260&q=80"
+                  alt="Laptop"></span> turn big ideas into digital products <span class="inline-image"><img
+                  loading="lazy"
+                  src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=260&q=80"
+                  alt="Design materials"></span> people love to use.</h2>
+         <div class="studio-image reveal"><img loading="lazy"
+               src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1800&q=85"
+               alt="Light-filled creative workspace with collaborative desks"><span class="image-note"><i></i>Good ideas
+               deserve a thoughtful build.</span></div>
+         <div class="about-bottom reveal">
+            <div>
+               <div class="studio-mark"><span class="brand-icon"></span><strong>Small team. Shared ambition.</strong>
+               </div>
+               <p class="intro">Designers, developers and problem-solvers.<br>Based in Delhi. Built for everywhere.</p>
+            </div>
+            <div>
+               <p>We bring design and engineering to the same table. From a first website to a full software product, we
+                  help you make the right decisions, build the right things, and launch with confidence.</p><a
+                  href="#process" class="btn">Meet our process <span class="arrow"><i data-lucide="arrow-right"
+                        aria-hidden="true"></i></span></a>
+            </div>
+         </div>
+      </section>
+      <section class="section wrap work" id="work">
+         <div class="section-head reveal">
+            <div><span class="section-kicker"><i data-lucide="layout-grid" aria-hidden="true"></i>Selected work /
+                  01</span>
+               <h2 class="section-title">Selected directions</h2>
+               <p class="muted">A few possibilities across web, apps and automation.<br>Concept projects, made to show
+                  what’s possible.</p>
+            </div><a class="btn" href="#contact">Build something like this <span class="arrow"><i
+                     data-lucide="arrow-right" aria-hidden="true"></i></span></a>
+         </div>
+         <div class="work-stack">
+            <article class="project">
+               <div class="project-copy">
+                  <div class="project-meta"><span><i data-lucide="compass" aria-hidden="true"></i>01 / Website &
+                        product</span><span>Concept</span></div>
+                  <div>
+                     <h3>Forma</h3>
+                     <p>A clear, confident home for a software product. Designed to turn curiosity into a conversation.
+                     </p>
+                     <div class="tags"><span>Web design</span><span>Development</span><span>Product thinking</span>
+                     </div>
+                  </div>
+               </div>
+               <div class="project-image"><img loading="lazy"
+                     src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1000&q=80"
+                     alt="Modern architectural setting for the Forma concept">
+                  <div class="mock-browser" aria-label="Forma website concept">
+                     <div class="browser-bar"><i></i><i></i><i></i><small>forma / a concept by ubbastudio</small></div>
+                     <div class="mock-inner">
+                        <div class="mock-nav"><b>forma®</b><span>Product &nbsp; Resources &nbsp; Get started ↗</span>
+                        </div>
+                        <h4>Less busywork.<br>More possibility.</h4>
+                        <p>One calm place for your team to turn plans into progress.</p><span class="mock-button">Meet
+                           your new workspace ↗</span>
+                        <div class="mock-stats">
+                           <div><b>01</b>Find your focus</div>
+                           <div><b>02</b>Make it happen</div>
+                           <div><b>03</b>Move together</div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </article>
+            <article class="project">
+               <div class="project-copy">
+                  <div class="project-meta"><span><i data-lucide="list-checks" aria-hidden="true"></i>02 / Mobile
+                        experience</span><span>Concept</span></div>
+                  <div>
+                     <h3>Offbeat</h3>
+                     <p>An app for finding your next great escape. A little less planning, a lot more exploring.</p>
+                     <div class="tags"><span>App design</span><span>Mobile development</span><span>User
+                           experience</span></div>
+                  </div>
+               </div>
+               <div class="project-image"><img loading="lazy"
+                     src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1000&q=85"
+                     alt="Mountain landscape behind a travel app concept">
+                  <div class="mock-phone">
+                     <div class="phone-head"><b>9:41</b><span><i data-lucide="signal" aria-hidden="true"></i><i
+                              data-lucide="battery-full" aria-hidden="true"></i></span></div>
+                     <div class="phone-body"><small>HELLO, EXPLORER</small>
+                        <h4>Find your<br>kind of away.</h4><img loading="lazy"
+                           src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=400&q=80"
+                           alt="Forest destination">
+                        <p><b>A weekend in the wild ↗</b></p><small>Fresh air. New perspectives. Your next
+                           story.</small>
+                        <div class="mock-button"
+                           style="background:#ff580a;color:white;text-align:center;border-radius:14px;padding:12px;margin-top:18px;font-size:10px">
+                           Explore destinations</div>
+                     </div>
+                  </div>
+               </div>
+            </article>
+            <article class="project">
+               <div class="project-copy">
+                  <div class="project-meta"><span><i data-lucide="pen-tool" aria-hidden="true"></i>03 / AI &
+                        operations</span><span>Concept</span></div>
+                  <div>
+                     <h3>On autopilot.</h3>
+                     <p>A smarter route from enquiry to follow-up. Connected tools, useful AI, and people in control.
+                     </p>
+                     <div class="tags"><span>AI automation</span><span>Integrations</span><span>Internal tools</span>
+                     </div>
+                  </div>
+               </div>
+               <div class="project-image"><img loading="lazy"
+                     src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&w=1000&q=80"
+                     alt="Workspace for an automated enquiry flow">
+                  <div class="automation-ui">
+                     <h4>A little less manual.</h4>
+                     <p>Enquiry → understanding → action.</p>
+                     <div class="flow-node"><b><i data-lucide="inbox" aria-hidden="true"></i></b> New enquiry received
+                     </div>
+                     <div class="flow-line"></div>
+                     <div class="flow-node"><b><i data-lucide="sparkles" aria-hidden="true"></i></b> AI organises the
+                        details</div>
+                     <div class="flow-line"></div>
+                     <div class="flow-node"><b><i data-lucide="circle-check" aria-hidden="true"></i></b> Your team
+                        reviews & replies</div>
+                  </div>
+               </div>
+            </article>
+         </div>
+      </section>
+      <section class="wrap services" id="services">
+         <div class="services-panel">
+            <div class="section-head reveal">
+               <div><span class="section-kicker"><i data-lucide="shapes" aria-hidden="true"></i>Our expertise /
+                     02</span>
+                  <h2 class="section-title">What we do</h2>
+                  <p>Five ways to move your business forward.<br>One team, from the first conversation to the next
+                     release.</p>
+               </div><a href="#contact" class="btn white">Start a project <span class="arrow"><i
+                        data-lucide="arrow-right" aria-hidden="true"></i></span></a>
+            </div>
+            <div class="tabs" role="tablist" aria-label="Our services"><button class="tab" id="tab-0" role="tab"
+                  aria-selected="true" aria-controls="service-panel" data-service="0">Website
+                  development</button><button class="tab" id="tab-1" role="tab" aria-selected="false"
+                  aria-controls="service-panel" tabindex="-1" data-service="1">App development</button><button
+                  class="tab" id="tab-2" role="tab" aria-selected="false" aria-controls="service-panel" tabindex="-1"
+                  data-service="2">AI automations</button><button class="tab" id="tab-3" role="tab"
+                  aria-selected="false" aria-controls="service-panel" tabindex="-1" data-service="3">Product
+                  development</button><button class="tab" id="tab-4" role="tab" aria-selected="false"
+                  aria-controls="service-panel" tabindex="-1" data-service="4">Ongoing support</button></div>
+            <div class="service-content" id="service-panel" role="tabpanel" aria-labelledby="tab-0">
+               <div class="service-copy">
+                  <h3 id="service-title">Websites that look the part. And work even harder.</h3>
+                  <ul id="service-list">
+                     <li><i data-lucide="check" aria-hidden="true"></i>Strategy and thoughtful UI/UX</li>
+                     <li><i data-lucide="check" aria-hidden="true"></i>Responsive, custom development</li>
+                     <li><i data-lucide="check" aria-hidden="true"></i>Performance and technical SEO</li>
+                     <li><i data-lucide="check" aria-hidden="true"></i>CMS and third-party integrations</li>
+                  </ul>
+                  <p class="service-foot" id="service-foot">From your first landing page to your next big chapter.</p>
+               </div>
+               <div class="service-image"><img id="service-img" loading="lazy"
+                     src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&w=1000&q=85"
+                     alt="Website development workspace"></div>
+            </div>
+         </div>
+      </section>
+      <section class="section process" id="process">
+         <div class="wrap">
+            <div class="section-head reveal">
+               <div><span class="section-kicker"><i data-lucide="route" aria-hidden="true"></i>The process / 03</span>
+                  <h2 class="section-title">Clear steps. Better launches.</h2>
+                  <p class="muted">You’re part of every milestone. We agree the scope and timeline before the first line
+                     of code.</p>
+               </div>
+               <div class="process-aside">
+                  <div class="big-number">6 steps</div>
+                  <p class="muted">From a first conversation to what comes next.</p>
+               </div>
+            </div>
+            <div class="timeline reveal">
+               <div class="milestone">
+                  <div class="milestone-card"><span><i data-lucide="compass" aria-hidden="true"></i>01 / Discover</span>
+                     <h3>Understand the problem</h3><small>Goals, audience & possibilities</small>
+                  </div><i class="timeline-dot"></i>
+               </div>
+               <div class="milestone">
+                  <div class="milestone-card"><span><i data-lucide="list-checks" aria-hidden="true"></i>02 /
+                        Define</span>
+                     <h3>Agree the right scope</h3><small>Roadmap & milestones</small>
+                  </div><i class="timeline-dot"></i>
+               </div>
+               <div class="milestone">
+                  <div class="milestone-card"><span><i data-lucide="pen-tool" aria-hidden="true"></i>03 / Design</span>
+                     <h3>Make the idea tangible</h3><small>Flows, UI & prototype</small>
+                  </div><i class="timeline-dot"></i>
+               </div>
+               <div class="milestone">
+                  <div class="milestone-card"><span><i data-lucide="code-2" aria-hidden="true"></i>04 / Develop</span>
+                     <h3>Build, share, refine</h3><small>Working software & reviews</small>
+                  </div><i class="timeline-dot"></i>
+               </div>
+               <div class="milestone">
+                  <div class="milestone-card"><span><i data-lucide="scan-check" aria-hidden="true"></i>05 / Test</span>
+                     <h3>Check every detail</h3><small>Devices, flows & performance</small>
+                  </div><i class="timeline-dot"></i>
+               </div>
+               <div class="milestone">
+                  <div class="milestone-card"><span><i data-lucide="rocket" aria-hidden="true"></i>06 / Launch</span>
+                     <h3>Ready for the real world</h3><small>Handover & next steps</small>
+                  </div><i class="timeline-dot"></i>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="section wrap" id="approach">
+         <div class="section-head reveal">
+            <h2 class="section-title">A good way to work.</h2>
+            <p class="muted">No mystery in the middle.<br>Just thoughtful people building useful things.</p>
+         </div>
+         <div class="principles-grid">
+            <article class="principle reveal">
+               <div class="principle-top"><span class="eyebrow">01 / Built together</span><span
+                     class="principle-icon"><i data-lucide="handshake" aria-hidden="true"></i></span></div>
+               <h3>You bring the ambition.<br>We bring design and engineering.</h3>
+               <p>We work through the important questions with you, so the finished product makes sense for your
+                  business and the people using it.</p>
+            </article>
+            <article class="principle reveal">
+               <div class="principle-top"><span class="eyebrow">02 / Open by default</span><span
+                     class="principle-icon"><i data-lucide="messages-square" aria-hidden="true"></i></span></div>
+               <h3>Clear scope.<br>Honest conversations.</h3>
+               <p>Regular reviews keep decisions visible and progress easy to follow.</p>
+            </article>
+            <article class="principle reveal">
+               <div class="principle-top"><span class="eyebrow">03 / Purposeful technology</span><span
+                     class="principle-icon"><i data-lucide="blocks" aria-hidden="true"></i></span></div>
+               <h3>The right tool.<br>For the right reason.</h3>
+               <p>We choose technology around your needs, your team, and your next stage of growth.</p>
+            </article>
+            <article class="principle reveal">
+               <div class="principle-top"><span class="eyebrow">04 / Built to keep going</span><span
+                     class="principle-icon"><i data-lucide="move-up-right" aria-hidden="true"></i></span></div>
+               <h3>A launch is a beginning.<br>Let’s make it a good one.</h3>
+               <p>Thoughtful handover, maintainable code, and a clear plan for whatever comes next.</p>
+            </article>
+         </div>
+      </section>
+      <section class="section wrap faq" id="faq">
+         <div class="faq-intro reveal">
+            <h2 class="section-title">Questions,<br>answered</h2>
+            <p class="muted">Every project starts with a conversation. Here are a few things you might be wondering.</p>
+            <a class="btn" href="#contact">Ask the studio <span class="arrow"><i data-lucide="arrow-right"
+                     aria-hidden="true"></i></span></a>
+         </div>
+         <div class="accordion reveal">
+            <details open>
+               <summary>How long does a project take?<i data-lucide="plus" class="faq-icon" aria-hidden="true"></i>
+               </summary>
+               <p>It depends on the scope. A focused website, a mobile app and a custom software platform need different
+                  timelines. We map out the milestones with you after discovery, before development begins.</p>
+            </details>
+            <details>
+               <summary>How much does a project cost?<i data-lucide="plus" class="faq-icon" aria-hidden="true"></i>
+               </summary>
+               <p>We quote around your requirements, integrations and timeline. Tell us what you have in mind and your
+                  budget range, and we’ll help define a practical scope.</p>
+            </details>
+            <details>
+               <summary>Do you work with teams outside Delhi?<i data-lucide="plus" class="faq-icon"
+                     aria-hidden="true"></i></summary>
+               <p>Yes. We’re based in Delhi and collaborate remotely. Calls, shared documents and regular reviews keep
+                  everyone aligned, wherever your team works.</p>
+            </details>
+            <details>
+               <summary>Can you build an MVP from an idea?<i data-lucide="plus" class="faq-icon" aria-hidden="true"></i>
+               </summary>
+               <p>Yes. We can help shape the core features, design the experience and build the first version, with a
+                  roadmap for what to develop after you learn from real users.</p>
+            </details>
+            <details>
+               <summary>What can you automate with AI?<i data-lucide="plus" class="faq-icon" aria-hidden="true"></i>
+               </summary>
+               <p>We can explore workflows such as organising incoming enquiries, document processing, internal search
+                  and connecting business tools. We define the data access and human review needed for each use case.
+               </p>
+            </details>
+            <details>
+               <summary>Can you support us after launch?<i data-lucide="plus" class="faq-icon" aria-hidden="true"></i>
+               </summary>
+               <p>We can scope ongoing maintenance, improvements and new features alongside your project. Support
+                  responsibilities and response expectations are agreed before launch.</p>
+            </details>
+         </div>
+      </section>
+      <section class="section wrap journal" id="journal">
+         <div class="section-head reveal">
+            <h2 class="section-title">From the journal</h2>
+            <p class="muted">A few notes on process, products and the craft of building better software.</p>
+         </div>
+         <div class="journal-grid"><button class="journal-card reveal" data-article="0">
+               <div class="journal-image"><img loading="lazy"
+                     src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=800&q=85"
+                     alt="Planning user interfaces and wireframes"></div>
+               <div class="journal-meta"><span>Process</span><span>Studio note · 2 min read</span></div>
+               <h3>Plan the product before writing the first line of code <i data-lucide="arrow-up-right"
+                     class="journal-arrow" aria-hidden="true"></i></h3>
+            </button><button class="journal-card reveal" data-article="1">
+               <div class="journal-image"><img loading="lazy"
+                     src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=800&q=85"
+                     alt="Colourful design work and visual exploration"></div>
+               <div class="journal-meta"><span>Product</span><span>Studio note · 2 min read</span></div>
+               <h3>What your first version actually needs to do <i data-lucide="arrow-up-right" class="journal-arrow"
+                     aria-hidden="true"></i></h3>
+            </button><button class="journal-card reveal" data-article="2">
+               <div class="journal-image"><img loading="lazy"
+                     src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=85"
+                     alt="Team reviewing business workflows"></div>
+               <div class="journal-meta"><span>Automation</span><span>Studio note · 2 min read</span></div>
+               <h3>Start with the busywork. Then think about AI. <i data-lucide="arrow-up-right" class="journal-arrow"
+                     aria-hidden="true"></i></h3>
+            </button></div>
+      </section>
+      <section class="contact" id="contact">
+         <div class="wrap">
+            <div class="contact-grid">
+               <div class="contact-intro reveal">
+                  <h2>Tell us about<br>your project.</h2>
+                  <p>A new idea, a better website, or a workflow that needs a rethink. We’d love to hear what you’re
+                     building.</p>
+                  <div class="contact-info"><small><i data-lucide="map-pin" aria-hidden="true"></i>Based in</small>
+                     <p>Delhi, India.</p>
+                  </div>
+                  <div class="contact-info"><small><i data-lucide="globe-2" aria-hidden="true"></i>Working with</small>
+                     <p>Ambitious people, everywhere.</p>
+                  </div>
+                  <div class="contact-info"><small><i data-lucide="orbit" aria-hidden="true"></i>From first idea to next
+                        release</small>
+                     <p>Let’s make it happen. <i data-lucide="arrow-up-right" aria-hidden="true"></i></p>
+                  </div>
+               </div>
+               <form class="form" id="project-form">
+                  <div class="form-row">
+                     <div class="field"><label for="name">Name</label><input id="name" name="name"
+                           placeholder="Your name" autocomplete="name" required maxlength="120"></div>
+                     <div class="field"><label for="email">Email</label><input id="email" name="email" type="email"
+                           placeholder="you@company.com" autocomplete="email" required maxlength="200"></div>
+                  </div>
+                  <div class="field"><label for="company">Company</label><input id="company" name="company"
+                        placeholder="Optional" autocomplete="organization" maxlength="200"></div>
+                  <fieldset>
+                     <legend>Budget</legend>
+                     <div class="budget-options"><label><input type="radio" name="budget" value="Under ₹1 lakh"> Under
+                           ₹1L</label><label><input type="radio" name="budget" value="₹1–3 lakh">
+                           ₹1L–3L</label><label><input type="radio" name="budget" value="₹3–5 lakh">
+                           ₹3L–5L</label><label><input type="radio" name="budget" value="₹5 lakh+">
+                           ₹5L+</label><label><input type="radio" name="budget" value="Let’s discuss" checked> Let’s
+                           discuss</label></div>
+                  </fieldset>
+                  <div class="field"><label for="project">About your project</label><textarea id="project"
+                        name="project" placeholder="What are you building, and when do you need it?" required
+                        maxlength="5000"></textarea></div><button class="btn orange" type="submit"><span
+                        id="submit-label">Download project brief</span> <span class="arrow" aria-hidden="true"><i
+                           data-lucide="arrow-down-to-line" aria-hidden="true"></i></span></button>
+                  <p class="form-note" id="form-note">Your brief downloads as a text file. Nothing is sent or stored on
+                     a server.</p>
+                  <p class="form-status" id="form-status" role="status"></p>
+               </form>
+            </div>
+            <footer class="footer">
+               <div class="footer-grid">
+                  <div><a class="brand" href="#home"><span class="brand-icon"></span>ubbastudio</a>
+                     <p>An independent software development studio turning ambitious ideas into websites, apps and
+                        useful automations.</p>
+                  </div>
+                  <div>
+                     <h3>Explore</h3>
+                     <div class="footer-links"><a href="#about">The studio</a><a href="#work">Work</a><a
+                           href="#services">Services</a><a href="#process">Process</a></div>
+                  </div>
+                  <div>
+                     <h3>Start a conversation</h3>
+                     <div class="footer-links"><a href="#contact">Your project</a><a href="#faq">Questions</a><a
+                           href="#journal">Journal</a></div>
+                  </div>
+                  <div>
+                     <h3>Studio</h3>
+                     <div class="footer-links"><span>Delhi, India</span><span>Design. Develop.
+                           Automate.</span><span>Made with intention.</span></div>
+                  </div>
+               </div>
+               <div class="footer-bottom"><span>© <span id="year">2026</span> ubbastudio. All rights
+                     reserved.</span><button id="privacy-button">Privacy & this website</button><a href="#home">Back to
+                     top <i data-lucide="arrow-up" aria-hidden="true"></i></a></div>
+            </footer>
+         </div>
+      </section>
+   </main>
+   <dialog class="modal" id="article-modal" data-lenis-prevent><button class="modal-close" aria-label="Close article"><i
+            data-lucide="x" aria-hidden="true"></i></button>
+      <div class="modal-inner" id="article-content"></div>
+   </dialog>
+   <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+   <script src="https://unpkg.com/lenis@1.3.27/dist/lenis.min.js"></script>
+   <script>
+      /* SETUP: Add your real form submission URL below to enable delivery.
+         The page ships in download mode because no inbox or backend was supplied.
+         An endpoint must accept POST JSON { name, email, company, budget, project }.
+         Unsplash images and CDN libraries require an internet connection. */
+      const STUDIO_CONFIG = { formEndpoint: '' };
+      function refreshIcons() { if (window.lucide) lucide.createIcons({ attrs: { 'stroke-width': 1.7, 'aria-hidden': 'true' } }) }
+      refreshIcons();
+      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      let lenis; if (window.Lenis && !reducedMotion) { lenis = new Lenis({ duration: 1.15, smoothWheel: true, anchors: { offset: -100 } }); function raf(t) { lenis.raf(t); requestAnimationFrame(raf) } requestAnimationFrame(raf) }
+      const nav = document.querySelector('.nav'), menu = document.querySelector('.menu-toggle'), links = document.querySelector('.nav-links');
+      menu.addEventListener('click', () => { const open = menu.getAttribute('aria-expanded') !== 'true'; menu.setAttribute('aria-expanded', String(open)); menu.setAttribute('aria-label', open ? 'Close menu' : 'Open menu'); links.classList.toggle('open', open) });
+      function closeMenu() { menu.setAttribute('aria-expanded', 'false'); menu.setAttribute('aria-label', 'Open menu'); links.classList.remove('open') }
+      links.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu)); document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu() });
+      let scrollPending = false; addEventListener('scroll', () => { if (!scrollPending) { requestAnimationFrame(() => { nav.classList.toggle('scrolled', scrollY > 60); document.querySelector('.progress').style.transform = `scaleX(${scrollY / (document.documentElement.scrollHeight - innerHeight) || 0})`; scrollPending = false }); scrollPending = true } }, { passive: true });
+      const services = [
+         { title: 'Websites that look the part. And work even harder.', list: ['Strategy and thoughtful UI/UX', 'Responsive, custom development', 'Performance and technical SEO', 'CMS and third-party integrations'], foot: 'From your first landing page to your next big chapter.', photo: 'photo-1499951360447-b19be8fe80f5', alt: 'Website development workspace' },
+         { title: 'From a bright idea to an app people reach for.', list: ['User journeys and interactive prototypes', 'Mobile and web app development', 'APIs, authentication and integrations', 'Testing, release and iteration'], foot: 'Useful experiences, made for real people.', photo: 'photo-1512941937669-90a1b58e7e9c', alt: 'Mobile application on a smartphone' },
+         { title: 'Less repetitive work. More room for what matters.', list: ['Workflow discovery and mapping', 'AI-assisted document and data processing', 'CRM and business tool integrations', 'Human review and clear controls'], foot: 'Practical automation, built around your business.', photo: 'photo-1454165804606-c3d57bc86b40', alt: 'Reviewing business processes for automation' },
+         { title: 'Your next big idea, built from the inside out.', list: ['Discovery, scope and product strategy', 'MVP design and full-stack development', 'Dashboards, platforms and internal tools', 'A roadmap for your next release'], foot: 'From a first prototype to a product you can grow.', photo: 'photo-1555066931-4365d14bab8c', alt: 'Software product code on a laptop' },
+         { title: 'Launch day is only the beginning.', list: ['Ongoing maintenance and improvements', 'New features and integrations', 'Performance reviews and fixes', 'Documentation and technical handover'], foot: 'Keep moving, with a team that knows your product.', photo: 'photo-1522071820081-009f0129c71c', alt: 'Team collaborating on software improvements' }];
+      const tabs = [...document.querySelectorAll('.tab')]; function chooseService(index, focus = false) { tabs.forEach((t, i) => { t.setAttribute('aria-selected', String(i === index)); t.tabIndex = i === index ? 0 : -1 }); if (focus) tabs[index].focus(); const s = services[index]; document.getElementById('service-panel').setAttribute('aria-labelledby', 'tab-' + index); document.getElementById('service-title').textContent = s.title; document.getElementById('service-list').replaceChildren(...s.list.map(x => { const li = document.createElement('li'); li.innerHTML = '<i data-lucide="check" aria-hidden="true"></i>'; li.append(document.createTextNode(x)); return li })); document.getElementById('service-foot').textContent = s.foot; const img = document.getElementById('service-img'); img.src = `https://images.unsplash.com/${s.photo}?auto=format&fit=crop&w=1000&q=85`; img.alt = s.alt; refreshIcons(); if (!reducedMotion) document.getElementById('service-panel').animate([{ opacity: .4, transform: 'translateY(10px)', filter: 'blur(4px)' }, { opacity: 1, transform: 'translateY(0)', filter: 'blur(0)' }], { duration: 430, easing: 'ease-out' }) }
+      tabs.forEach((t, i) => { t.addEventListener('click', () => chooseService(i)); t.addEventListener('keydown', e => { let next; if (e.key === 'ArrowRight') next = (i + 1) % tabs.length; if (e.key === 'ArrowLeft') next = (i + tabs.length - 1) % tabs.length; if (e.key === 'Home') next = 0; if (e.key === 'End') next = tabs.length - 1; if (next !== undefined) { e.preventDefault(); chooseService(next, true) } }) });
+      document.querySelectorAll('.accordion details').forEach(el => el.addEventListener('toggle', () => { if (el.open) document.querySelectorAll('.accordion details').forEach(other => { if (other !== el) other.open = false }) }));
+      const articles = [
+         { category: 'Process', title: 'Plan the product before writing the first line of code', body: '<p>A good brief starts with the change you want to make. Who is the product for? What are they trying to do? What is getting in their way today?</p><h3>Start with the journey</h3><p>Write down the shortest useful path from someone arriving to completing their task. For a website, that might be understanding your service and making an enquiry. For an app, it could be creating an account and completing one essential action.</p><h3>Agree what success looks like</h3><p>Pick a small set of outcomes you can observe. Make sure the team agrees which features are essential for those outcomes and which can wait. A focused scope makes trade-offs easier throughout the build.</p><h3>Make decisions visible</h3><p>Use simple wireframes, a written feature list and a shared milestone plan. Review the risky assumptions first. The aim is to create enough clarity to build confidently, while leaving room to learn.</p>' },
+         { category: 'Product', title: 'What your first version actually needs to do', body: '<p>Your first version does not need to contain every idea on the roadmap. It needs to help a specific person solve a specific problem, from beginning to end.</p><h3>Choose one complete experience</h3><p>Focus on one useful workflow. A small experience that works all the way through is easier to understand and evaluate than several features that stop halfway.</p><h3>Keep the fundamentals</h3><p>A smaller scope still needs clear navigation, sensible error messages, accessibility and appropriate data protection. These are part of the experience, not decorative extras.</p><h3>Leave space to learn</h3><p>Plan how you will collect feedback and decide what to build next. Speak with people who use the product, watch where they get stuck and distinguish repeated problems from one-off requests.</p><p>The first release is a way to begin a useful conversation with your users.</p>' },
+         { category: 'Automation', title: 'Start with the busywork. Then think about AI.', body: '<p>The best place to start an automation project is a repeated task that someone already understands. Map what happens, which tools are involved and where the work gets stuck.</p><h3>Make the workflow explicit</h3><p>Describe the trigger, the information needed and the expected result. Straightforward rules may be enough. AI becomes useful when a task involves unstructured information, such as extracting details from an enquiry or suggesting a category.</p><h3>Decide where people stay involved</h3><p>Choose what can happen automatically and what needs review. Give the team a way to inspect results, handle exceptions and recover when a step fails.</p><h3>Start small and measure</h3><p>Try one bounded workflow with representative examples before expanding it. Compare the time saved with the effort needed to review results and maintain the integration.</p><p>The goal is dependable assistance that makes the working day easier.</p>' }];
+      const modal = document.getElementById('article-modal'); let previousFocus; function openModal(html) { previousFocus = document.activeElement; document.getElementById('article-content').innerHTML = html; modal.showModal(); lenis?.stop() } document.querySelectorAll('[data-article]').forEach(btn => btn.addEventListener('click', () => { const a = articles[Number(btn.dataset.article)]; openModal(`<span class="eyebrow">${a.category} / Studio note</span><h2>${a.title}</h2>${a.body}`) })); document.querySelector('.modal-close').addEventListener('click', () => modal.close()); modal.addEventListener('click', e => { if (e.target === modal) { const r = modal.getBoundingClientRect(); if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) modal.close() } }); modal.addEventListener('close', () => { lenis?.start(); previousFocus?.focus() }); document.getElementById('privacy-button').addEventListener('click', () => openModal('<span class="eyebrow">Privacy</span><h2>A small note on this website.</h2><p>This version does not use analytics or store your project details on a server. The project form generates a text file on your device.</p><p>Fonts, photographs and animation libraries load from external providers: Google Fonts, Unsplash, jsDelivr and unpkg. Your browser makes requests to those providers to display the page.</p><p>If a submission endpoint is configured, project details will be sent to that endpoint. The site owner should update this notice before enabling submissions.</p>'));
+      const form = document.getElementById('project-form'); if (STUDIO_CONFIG.formEndpoint) { document.getElementById('submit-label').textContent = 'Send project enquiry'; document.getElementById('form-note').textContent = 'Your details will be sent to the studio to discuss this project.' }
+      form.addEventListener('submit', async e => { e.preventDefault(); if (!form.reportValidity()) return; const data = Object.fromEntries(new FormData(form)), status = document.getElementById('form-status'), button = form.querySelector('button[type=submit]'); if (!STUDIO_CONFIG.formEndpoint) { const brief = `UBBASTUDIO — PROJECT BRIEF\n\nName: ${data.name}\nEmail: ${data.email}\nCompany: ${data.company || '—'}\nBudget: ${data.budget}\n\nABOUT THE PROJECT\n${data.project}\n`; const url = URL.createObjectURL(new Blob([brief], { type: 'text/plain;charset=utf-8' })), a = document.createElement('a'); a.href = url; a.download = 'ubbastudio-project-brief.txt'; a.click(); setTimeout(() => URL.revokeObjectURL(url), 2000); status.textContent = 'Your brief has been prepared for download. No enquiry has been sent.'; return } button.disabled = true; status.textContent = 'Sending your enquiry…'; try { const r = await fetch(STUDIO_CONFIG.formEndpoint, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) }); if (!r.ok) throw new Error(); status.textContent = 'Your enquiry was submitted successfully.'; form.reset() } catch { status.textContent = 'Your enquiry could not be sent. Please try again. Your details remain in the form.' } finally { button.disabled = false } });
+      const activeSections = new IntersectionObserver(entries => { entries.forEach(entry => { if (entry.isIntersecting) { document.querySelectorAll('.nav-links a').forEach(a => { if (a.getAttribute('href') === '#' + entry.target.id) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current') }) } }) }, { rootMargin: '-15% 0px -60% 0px', threshold: 0 });['home', 'about', 'work', 'services', 'process', 'approach', 'faq', 'journal', 'contact'].forEach(id => activeSections.observe(document.getElementById(id)));
+      document.getElementById('year').textContent = new Date().getFullYear();
+      // Images retain a useful background if an external image is unavailable.
+      document.querySelectorAll('img').forEach(img => img.addEventListener('error', () => { img.style.background = '#e7e2dc'; img.style.color = '#4c4945' }, { once: true }));
+   </script>
+   <script type="module">
+      // Motion is the animation library formerly known as Framer Motion.
+      // The vanilla API keeps this page editable as one HTML file, without a build step.
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (!reduce) { try { const { animate, inView, stagger } = await import('https://cdn.jsdelivr.net/npm/motion@12.23.24/+esm'); animate('.hero-enter', { opacity: [0, 1], y: [24, 0], filter: ['blur(12px)', 'blur(0px)'] }, { duration: .9, delay: stagger(.12), ease: [.22, 1, .36, 1] }); animate('.fan', { opacity: [0, 1], y: [65, 0] }, { duration: 1.2, delay: .35, ease: [.22, 1, .36, 1] }); document.querySelectorAll('.reveal').forEach(el => { if (el.getBoundingClientRect().top > innerHeight) { el.style.opacity = '0'; inView(el, () => { animate(el, { opacity: [0, 1], y: [32, 0], filter: ['blur(9px)', 'blur(0px)'] }, { duration: .8, ease: [.22, 1, .36, 1] }); return () => { } }, { margin: '0px 0px -40px 0px' }) } }); document.documentElement.dataset.motion = 'ready' } catch (error) { document.querySelectorAll('.reveal').forEach(el => { el.style.opacity = '1'; el.style.filter = 'none' }); console.info('Animation CDN unavailable; readable static layout retained.') } }
+   </script>
 </body>
+
 </html>
